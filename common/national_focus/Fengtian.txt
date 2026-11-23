@@ -3433,7 +3433,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = FNG_Promote_Young_Officers
-		x = -1
+		x = -3
 		y = 2
 		ai_will_do = { factor = 80 }
 		completion_reward = {
@@ -3785,7 +3785,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = FNG_Promote_Young_Officers
-		x = -3
+		x = -5
 		y = 2
 		ai_will_do = { factor = 80 }
 		completion_reward = {
