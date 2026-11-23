@@ -687,6 +687,28 @@ FNG_claim_land_asia = {
 	}
 }
 
+# 奉军落后三级：_1 → _2 → _3 → 移除。源自 KR。
+# 调用者：Methodical_Approach_To_War / Modernized_Curriculum / Promote_Young_Officers 等
+FNG_improve_army_problem_effect = {
+	if = {
+		limit = { has_idea = FNG_Fengtian_Army_3 }
+		remove_ideas = FNG_Fengtian_Army_3
+	}
+	else_if = {
+		limit = { has_idea = FNG_Fengtian_Army_2 }
+		swap_ideas = {
+			remove_idea = FNG_Fengtian_Army_2
+			add_idea = FNG_Fengtian_Army_3
+		}
+	}
+	else = {
+		swap_ideas = {
+			remove_idea = FNG_Fengtian_Army_1
+			add_idea = FNG_Fengtian_Army_2
+		}
+	}
+}
+
 #FNG_increase_japanese_tensions = {
 #	if = {
 #		limit = {

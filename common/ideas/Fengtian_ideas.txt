@@ -1832,6 +1832,44 @@ ideas = {
 				army_defence_against_major_factor = 0.10
 			}
 		}
+
+		# 奉军落后三级（源自 KR）。取代 KX 原有的单级 FNG_Northeast_Army
+		# （那个是 org -20% / 攻防 -25%，过重且从未启用）。
+		# 开局挂 _1，由 FNG_improve_army_problem_effect 逐级升到 _3，最后整个移除。
+		FNG_Fengtian_Army_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_Fengtian_Army_1" }
+			picture = generic_army_problems
+			allowed = { always = no }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.2
+				army_org_factor = -0.05
+				military_leader_cost_factor = 0.2
+				land_doctrine_cost_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		FNG_Fengtian_Army_2 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_Fengtian_Army_2" }
+			picture = generic_army_problems
+			allowed = { always = no }
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				army_org_factor = -0.035
+				military_leader_cost_factor = 0.1
+				land_doctrine_cost_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		FNG_Fengtian_Army_3 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_Fengtian_Army_3" }
+			picture = generic_army_problems
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = -0.02
+				land_doctrine_cost_factor = 0.05
+				army_speed_factor = 0.025
+			}
+		}
 	}
 
 	##############

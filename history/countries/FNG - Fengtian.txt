@@ -1,4 +1,4 @@
-﻿capital = 716
+capital = 716
 set_naval_oob= "FNG_naval"
 set_research_slots = 3
 starting_train_buffer = 1
@@ -248,7 +248,9 @@ add_ideas = {
 	FNG_Backward_Industry
 	FNG_Unscrupulous_Governance
 	FNG_Investment_Dearth
-	#FNG_Northeast_Army
+	# 奉军落后：开局第一级，由 FNG_improve_army_problem_effect 逐级升到 _3 后整个移除
+	# 原单级 FNG_Northeast_Army（org -20% / 攻防 -25%）已废弃，定义仍在文件里但永不挂载
+	FNG_Fengtian_Army_1
 	FNG_The_Kwantung_Army
 	FNG_mantetsu_influence_idea
 	FNG_Regionalist_Sentiment
