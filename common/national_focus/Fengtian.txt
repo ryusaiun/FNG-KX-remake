@@ -2856,7 +2856,7 @@ focus_tree = {
 		icon = GFX_goal_JAP_Shipbuilding_Support_Plan
 		cost = 5
 		prerequisite = {
-			focus = FNG_Rearming_the_Northeast
+			focus = FNG_Reorganize_the_Coastal_Defence_Forces
 		}
 		relative_position_id = FNG_Rearming_the_Northeast
 		x = 1
@@ -3077,15 +3077,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}
 
-	# ===== KX 原版军事线：暂隔离，待整合或替换 =====
+	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_Lessons_from_the_Zhifeng_Wars
 		icon = GFX_goal_FNG_Army_Modern
 		cost = 8
 		prerequisite = { focus = FNG_Found_the_Shenyang_National_Academy }
-		relative_position_id = FNG_Collaborative_Equipment_Design
-		x = -5
-		y = 3
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = -3
+		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Lessons_from_the_Zhifeng_Wars"
@@ -3284,15 +3284,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
 	}
 
-	# ===== KX 原版军事线：暂隔离，待整合或替换 =====
+	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_Moral_Indoctrination
 		icon = GFX_goal_JAP_samurai_jack
 		cost = 8
 		prerequisite = { focus = FNG_Lessons_from_the_Zhifeng_Wars }
 		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
-		x = 2
-		y = 0
+		x = 0
+		y = 1
 		ai_will_do = { factor = 40 }
 		available = {
 			FNG_JAP_not_hostile = yes
@@ -3344,15 +3344,15 @@ focus_tree = {
 		}
 	}
 
-	# ===== KX 原版军事线：暂隔离，待整合或替换 =====
+	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_New_Model_Army
 		icon = GFX_goal_FNG_fengtian_army
 		cost = 8
 		prerequisite = { focus = FNG_Moral_Indoctrination }
 		relative_position_id = FNG_Moral_Indoctrination
-		x = 2
-		y = 0
+		x = 0
+		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Model_Army"
@@ -3496,7 +3496,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {
-			focus = FNG_Found_the_Shenyang_National_Academy
+			focus = FNG_Lessons_from_the_Zhifeng_Wars
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 0
@@ -3571,7 +3571,7 @@ focus_tree = {
 		icon = GFX_goal_USA_Formalize_Patrol_Routes
 		cost = 5
 		prerequisite = {
-			focus = FNG_Rearming_the_Northeast
+			focus = FNG_Reorganize_the_Coastal_Defence_Forces
 		}
 		relative_position_id = FNG_Rearming_the_Northeast
 		x = 3
@@ -3590,7 +3590,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 
-	# ===== KX 原版军事线：暂隔离，待整合或替换 =====
+	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_Reorganize_the_Coastal_Defence_Forces
 		icon = GFX_goal_FNG_beiyang_navy
@@ -3598,9 +3598,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Found_the_Shenyang_National_Academy
 		}
-		relative_position_id = FNG_Collaborative_Equipment_Design
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = -7
-		y = 3
+		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reorganize_the_Coastal_Defence_Forces"
