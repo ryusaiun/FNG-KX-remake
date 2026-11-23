@@ -2971,8 +2971,8 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Fuguo_Qiangbing }
 		prerequisite = { focus = FNG_Suppress_Regionalist_Sentiment }
-		x = 15
-		y = -9
+		x = 44
+		y = 1
 		relative_position_id = FNG_Fuguo_Qiangbing
 		ai_will_do = { factor = 90 }
 		completion_reward = {
@@ -3545,8 +3545,8 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 6
-		y = -9
+		x = 35
+		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Rearming_the_Northeast"
@@ -3804,8 +3804,8 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 24
-		y = -9
+		x = 53
+		y = 1
 		available = {
 			has_idea = FNG_The_Kwantung_Army
 			JAP = { is_faction_leader = yes }
