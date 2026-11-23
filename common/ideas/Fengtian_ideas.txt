@@ -1723,6 +1723,115 @@ ideas = {
 				mic_to_target_factor = 0.20
 			}
 		}
+
+		##############################
+		#### 军事改革（移植自 KR）####
+		##############################
+		# 原 KR 的 6 级张系 / 5 级士官系已剥离，改用这两条通用线
+		FNG_shared_army_reform_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shared_army_reform_1" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army = 0.05
+			}
+		}
+		FNG_shared_army_reform_2 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shared_army_reform_2" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_unit_factor = 0.1
+				army_morale_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+		FNG_shared_army_reform_3 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shared_army_reform_3" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+			modifier = {
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				experience_gain_army_unit_factor = 0.1
+				army_morale_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+		# 原版有 cancel = { FNG_JAP_hostile = yes }，因不搬日本账本已移除
+		FNG_Japanese_Instructors = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_Japanese_Instructors" }
+			picture = generic_japanese_conflict
+			allowed = { always = no }
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		FNG_chinese_tanks = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_chinese_tanks" }
+			picture = generic_acquire_tanks
+			allowed = { always = no }
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		FNG_railway_gun = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_railway_gun" }
+			picture = SWE_let_fly_all_guns
+			allowed = { always = no }
+			modifier = {
+				railway_gun_bombardment_factor = 0.1
+			}
+		}
+		FNG_cavalry_reform_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_cavalry_reform_1" }
+			picture = ETH_national_studs
+			allowed = { always = no }
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+				army_speed_factor = 0.05
+				resistance_target_on_our_occupied_states = 0.1
+			}
+		}
+		FNG_cavalry_reforms = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_cavalry_reforms" }
+			picture = ETH_national_studs
+			allowed = { always = no }
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+			}
+		}
+		# 政治定盘的两个终点
+		FNG_triumph_of_the_model_officers = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_triumph_of_the_model_officers" }
+			picture = UK_military_loyal_idea
+			allowed = { always = no }
+			modifier = {
+				command_power_gain = 0.25
+				max_command_power = 15
+				army_org_Factor = 0.05
+			}
+		}
+		FNG_primacy_of_the_loyalists = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_primacy_of_the_loyalists" }
+			picture = UK_military_loyal_idea
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_factor = -0.15
+				political_power_cost = 0.10
+				stability_factor = 0.05
+				army_defence_against_major_factor = 0.10
+			}
+		}
 	}
 
 	##############
