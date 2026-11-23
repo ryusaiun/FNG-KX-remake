@@ -3083,9 +3083,9 @@ focus_tree = {
 		icon = GFX_goal_FNG_Army_Modern
 		cost = 8
 		prerequisite = { focus = FNG_Found_the_Shenyang_National_Academy }
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 13
-		y = 2
+		relative_position_id = FNG_Collaborative_Equipment_Design
+		x = -5
+		y = 3
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Lessons_from_the_Zhifeng_Wars"
@@ -3291,8 +3291,8 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Lessons_from_the_Zhifeng_Wars }
 		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
-		x = 0
-		y = 1
+		x = 2
+		y = 0
 		ai_will_do = { factor = 40 }
 		available = {
 			FNG_JAP_not_hostile = yes
@@ -3351,8 +3351,8 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Moral_Indoctrination }
 		relative_position_id = FNG_Moral_Indoctrination
-		x = 0
-		y = 1
+		x = 2
+		y = 0
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Model_Army"
@@ -3598,9 +3598,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Found_the_Shenyang_National_Academy
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 13
-		y = 1
+		relative_position_id = FNG_Collaborative_Equipment_Design
+		x = -7
+		y = 3
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reorganize_the_Coastal_Defence_Forces"
