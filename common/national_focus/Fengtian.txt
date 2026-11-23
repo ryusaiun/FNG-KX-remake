@@ -2670,9 +2670,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Improve_Logistics
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 2
-		y = 6
+		relative_position_id = FNG_Promote_Young_Officers
+		x = 1.5
+		y = 3
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Artillery_Reform"
@@ -2698,9 +2698,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Obtain_Japanese_Instructors
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 0
-		y = 6
+		relative_position_id = FNG_Promote_Young_Officers
+		x = -1
+		y = 3
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
@@ -2726,9 +2726,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_Nine_Points_Strategy
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -4
-		y = 5
+		relative_position_id = FNG_Zaibatsu_Investments
+		x = 0
+		y = 2
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
@@ -2763,9 +2763,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Diversify_Armament_Production
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -7
-		y = 4
+		relative_position_id = FNG_Diversify_Armament_Production
+		x = 0
+		y = 2
 		available = {
 			FNG = {
 				controls_state = 716
@@ -2811,9 +2811,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Expand_the_Shenyang_Arsenal
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -6
-		y = 2
+		relative_position_id = FNG_Expand_the_Shenyang_Arsenal
+		x = 0
+		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Diversify_Armament_Production"
@@ -2858,9 +2858,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Reorganize_the_Coastal_Defence_Forces
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -7
-		y = 2
+		relative_position_id = FNG_Reorganize_the_Coastal_Defence_Forces
+		x = -1
+		y = 1
 		available = {
 			FNG = {
 				controls_state = 716
@@ -2903,9 +2903,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_China_Flying_Corps
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 5
-		y = 2
+		relative_position_id = FNG_The_China_Flying_Corps
+		x = -1
+		y = 1
 		available = {
 			FNG = {
 				controls_state = 716
@@ -2934,8 +2934,8 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Found_the_Shenyang_National_Academy
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -6
+		relative_position_id = FNG_Rearming_the_Northeast
+		x = -1
 		y = 1
 		available = {
 			FNG = {
@@ -2971,7 +2971,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Fuguo_Qiangbing }
 		prerequisite = { focus = FNG_Suppress_Regionalist_Sentiment }
-		x = 13
+		x = 15
 		y = 1
 		relative_position_id = FNG_Fuguo_Qiangbing
 		ai_will_do = { factor = 90 }
@@ -3006,9 +3006,9 @@ focus_tree = {
 			focus = FNG_Obtain_Japanese_Instructors
 			focus = FNG_Modernized_Curriculum
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 3
-		y = 7
+		relative_position_id = FNG_Promote_Young_Officers
+		x = 0
+		y = 2
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Improve_Logistics"
@@ -3036,9 +3036,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_Kwantung_Protocol
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 3
-		y = 2
+		relative_position_id = FNG_The_Kwantung_Protocol
+		x = 0
+		y = 1
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
@@ -3083,7 +3083,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Found_the_Shenyang_National_Academy }
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 1
+		x = -2
 		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
@@ -3125,9 +3125,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Modern_General_Staff
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 4
-		y = 8
+		relative_position_id = FNG_Modern_General_Staff
+		x = 0
+		y = 1
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Methodical_Approach_To_War"
@@ -3142,9 +3142,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Diversify_Armament_Production
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -7
-		y = 3
+		relative_position_id = FNG_Diversify_Armament_Production
+		x = 1
+		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Militarize_the_Minsheng_Truck"
@@ -3192,9 +3192,9 @@ focus_tree = {
 			focus = FNG_Study_Japanese_Infantry_Tactics
 			focus = FNG_New_Generation_Of_Chinese_Officers
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 4
-		y = 7
+		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
+		x = 1
+		y = 1
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modern_General_Staff"
@@ -3230,9 +3230,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Obtain_Japanese_Instructors
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 1
-		y = 6
+		relative_position_id = FNG_Promote_Young_Officers
+		x = 2
+		y = 2
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernise_Infantry_Tactics"
@@ -3255,8 +3255,8 @@ focus_tree = {
 			focus = FNG_Promote_Young_Officers
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 3
-		y = 6
+		x = 1
+		y = 3
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernized_Curriculum"
@@ -3288,9 +3288,9 @@ focus_tree = {
 		icon = GFX_goal_JAP_samurai_jack
 		cost = 8
 		prerequisite = { focus = FNG_Lessons_from_the_Zhifeng_Wars }
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 1
-		y = 2
+		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
+		x = 0
+		y = 1
 		ai_will_do = { factor = 40 }
 		available = {
 			FNG_JAP_not_hostile = yes
@@ -3326,9 +3326,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Obtain_Japanese_Instructors
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 5
-		y = 6
+		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
+		x = 2
+		y = 0
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Generation_Of_Chinese_Officers"
@@ -3347,9 +3347,9 @@ focus_tree = {
 		icon = GFX_goal_FNG_fengtian_army
 		cost = 8
 		prerequisite = { focus = FNG_Moral_Indoctrination }
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 1
-		y = 3
+		relative_position_id = FNG_Moral_Indoctrination
+		x = 0
+		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Model_Army"
@@ -3372,8 +3372,8 @@ focus_tree = {
 			focus = FNG_Promote_Young_Officers
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 2
-		y = 5
+		x = -1
+		y = 3
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
@@ -3429,9 +3429,9 @@ focus_tree = {
 				has_completed_focus = FNG_Redefine_Provincial_Obligations
 			}
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		relative_position_id = FNG_New_Model_Army
 		x = 1
-		y = 4
+		y = 1
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_One_Army_One_Republic"
@@ -3454,9 +3454,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Request_Air_Shipment
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 6
-		y = 4
+		relative_position_id = FNG_Request_Air_Shipment
+		x = 0
+		y = 1
 		mutually_exclusive = {
 			focus = FNG_Reverse_Engineering_Efforts
 		}
@@ -3496,8 +3496,8 @@ focus_tree = {
 			focus = FNG_New_Model_Army
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 2
-		y = 4
+		x = 0
+		y = 2
 		ai_will_do = { factor = 70 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Promote_Young_Officers"
@@ -3518,9 +3518,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_Nine_Points_Strategy
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -6
-		y = 4
+		relative_position_id = FNG_The_Nine_Points_Strategy
+		x = 0
+		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Re-Forming_the_Marine_Corps"
@@ -3541,9 +3541,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Fuguo_Qiangbing
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -4
-		y = 0
+		relative_position_id = FNG_Fuguo_Qiangbing
+		x = 6
+		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Rearming_the_Northeast"
@@ -3570,9 +3570,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Reorganize_the_Coastal_Defence_Forces
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -5
-		y = 2
+		relative_position_id = FNG_Reorganize_the_Coastal_Defence_Forces
+		x = 1
+		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Regular_River_Patrols"
@@ -3595,15 +3595,15 @@ focus_tree = {
 			focus = FNG_Found_the_Shenyang_National_Academy
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -5
+		x = -7
 		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reorganise_the_Coastal_Defence_Forces"
+			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reorganize_the_Coastal_Defence_Forces"
 			navy_experience = 15
 			add_war_support = 0.05
 			add_doctrine_cost_reduction = {
-				name = FNG_Reorganise_the_Coastal_Defence_Forces
+				name = FNG_Reorganize_the_Coastal_Defence_Forces
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
@@ -3619,9 +3619,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Expand_the_Shenyang_Aerodrome
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 6
-		y = 3
+		relative_position_id = FNG_Shoutai_Tactics
+		x = 0
+		y = 1
 		available = {
 			has_idea = FNG_The_Kwantung_Army
 			JAP = { is_faction_leader = yes }
@@ -3664,9 +3664,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Expand_the_Shenyang_Aerodrome
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 5
-		y = 4
+		relative_position_id = FNG_Expand_the_Shenyang_Aerodrome
+		x = 0
+		y = 2
 		mutually_exclusive = {
 			focus = FNG_Order_New_Aircraft
 		}
@@ -3696,9 +3696,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_China_Flying_Corps
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 6
-		y = 2
+		relative_position_id = FNG_The_China_Flying_Corps
+		x = 1
+		y = 1
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
@@ -3723,9 +3723,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Obtain_Japanese_Instructors
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		relative_position_id = FNG_Obtain_Japanese_Instructors
 		x = 4
-		y = 6
+		y = 0
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Study_Japanese_Infantry_Tactics"
@@ -3751,8 +3751,8 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_The_Kwantung_Protocol
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 5
+		relative_position_id = FNG_The_Kwantung_Protocol
+		x = -2
 		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -3780,9 +3780,9 @@ focus_tree = {
 				has_completed_focus = FNG_Redefine_Provincial_Obligations
 			}
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 0
-		y = 4
+		relative_position_id = FNG_New_Model_Army
+		x = -1
+		y = 1
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Generals_Know_Best"
@@ -3799,9 +3799,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Fuguo_Qiangbing
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 4
-		y = 0
+		relative_position_id = FNG_Fuguo_Qiangbing
+		x = 24
+		y = 1
 		available = {
 			has_idea = FNG_The_Kwantung_Army
 			JAP = { is_faction_leader = yes }
@@ -3841,9 +3841,9 @@ focus_tree = {
 			focus = FNG_Regular_River_Patrols
 			focus = FNG_Expand_Yingkou_Naval_Yard
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -6
-		y = 3
+		relative_position_id = FNG_Expand_Yingkou_Naval_Yard
+		x = 1
+		y = 1
 		available = {
 			FNG = {
 				controls_state = 716
@@ -3899,9 +3899,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Jigyou_Hikaku
 		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 3
-		y = 3
+		relative_position_id = FNG_Jigyou_Hikaku
+		x = 1
+		y = 1
 		available = {
 			JAP = { is_faction_leader = yes }
 		}
