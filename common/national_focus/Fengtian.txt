@@ -3008,7 +3008,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 3
-		y = 6
+		y = 7
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Improve_Logistics"
@@ -3127,7 +3127,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 4
-		y = 7
+		y = 8
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Methodical_Approach_To_War"
@@ -3194,7 +3194,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 4
-		y = 6
+		y = 7
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modern_General_Staff"
@@ -3232,7 +3232,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 1
-		y = 5
+		y = 6
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernise_Infantry_Tactics"
@@ -3256,7 +3256,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 3
-		y = 5
+		y = 6
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernized_Curriculum"
@@ -3328,7 +3328,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 5
-		y = 5
+		y = 6
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Generation_Of_Chinese_Officers"
@@ -3725,7 +3725,7 @@ focus_tree = {
 		}
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
 		x = 4
-		y = 5
+		y = 6
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Study_Japanese_Infantry_Tactics"
