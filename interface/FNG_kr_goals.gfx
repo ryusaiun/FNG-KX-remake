@@ -1,0 +1,11 @@
+spriteTypes = {
+	# KR 原创国策图标 —— KX 与本体都没有，从 Kaiserredux 搬入
+	spriteType = {
+		name = "GFX_goal_China_Beiyang_Mass_Assault"
+		texturefile = "gfx/interface/goals/China_Beiyang_Mass_Assault.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_railway_gun"
+		texturefile = "gfx/interface/goals/generic_railway_gun.png"
+	}
+}

@@ -2675,12 +2675,43 @@ focus_tree = {
 		y = 3
 		ai_will_do = { factor = 50 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Artillery_Reform"
-			swap_ideas = {
-				add_idea = FNG_shared_army_reform_3
-				remove_idea = FNG_shared_army_reform_2
+			log = "[GetLogRoot]: Focus Completed FNG_Artillery_Reform"
+			if = {
+				limit = { has_completed_focus = FNG_Zhang_Clique }
+				swap_ideas = {
+					add_idea = FNG_shared_army_reform_zhang_clique_artillery
+					remove_idea = FNG_shared_army_reform_3
+				}
+				enable_tech_anti_fortification_artillery = yes
+				custom_effect_tooltip = tooltip_white_line
 			}
-			enable_tech_anti_fortification_artillery = yes
+			else_if = {
+				limit = { has_completed_focus = FNG_Shikan_Clique_Chosen }
+				swap_ideas = {
+					add_idea = FNG_shared_army_reform_shikan_clique_artillery
+					remove_idea = FNG_shared_army_reform_3
+				}
+			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = tooltip_if_focus_completed
+					FOCUS = FNG_Zhang_Clique
+				}
+				swap_ideas = {
+					add_idea = FNG_shared_army_reform_zhang_clique_artillery
+					remove_idea = FNG_shared_army_reform_3
+				}
+				enable_tech_anti_fortification_artillery = yes
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = {
+					localization_key = tooltip_if_focus_completed
+					FOCUS = FNG_Shikan_Clique_Chosen
+				}
+				swap_ideas = {
+					add_idea = FNG_shared_army_reform_shikan_clique_artillery
+					remove_idea = FNG_shared_army_reform_3
+				}
+			}
 			add_tech_bonus = {
 				name = FNG_Artillery_Reform
 				bonus = 1
@@ -2706,7 +2737,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 80 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Collaborative_Equipment_Design"
+			log = "[GetLogRoot]: Focus Completed FNG_Collaborative_Equipment_Design"
 			add_tech_bonus = {
 				name = FNG_Collaborative_Equipment_Design
 				bonus = 1.00
@@ -2734,7 +2765,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Commission_Japanese_Ships"
+			log = "[GetLogRoot]: Focus Completed FNG_Commission_Japanese_Ships"
 			if = {
 				limit = { has_dlc_aat = no }
 				custom_effect_tooltip = available_designer
@@ -2749,8 +2780,12 @@ focus_tree = {
 				mio:FNG_kure_naval_arsenal_organisation = { add_mio_size = 2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = JAP decision = FNG_JAP_destroyers }
+			activate_targeted_decision = { target = JAP decision = FNG_JAP_subs }
+			activate_targeted_decision = { target = JAP decision = FNG_JAP_cruisers }
 			if = {
-				limit = { has_dlc_aat = no } #can buy on market
+				limit = { has_dlc_aat = no } 
+				activate_targeted_decision = { target = JAP decision = FNG_JAP_convoys }
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
@@ -2773,7 +2808,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 60 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Develop_the_Dadong_Artillery_Complex"
+			log = "[GetLogRoot]: Focus Completed FNG_Develop_the_Dadong_Artillery_Complex"
 			if = {
 				limit = { has_country_flag = strengthen_army }
 				custom_effect_tooltip = BONUS_PP_25
@@ -2797,9 +2832,24 @@ focus_tree = {
 				type = arms_factory
 				level = 1
 			}
-			set_temp_variable = { ZCPOP = 3 }
-			FNG_ZCPOP = yes
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = dadong_artillery_complex
+			}
+			else = {
+				if = {
+					limit = { mio:CHN_artillery_industry_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = available_mio_tt
+					show_mio_tooltip = CHN_artillery_industry_organisation
+				}
+				mio:CHN_artillery_industry_organisation = {
+					set_mio_flag = CHN_mio_unlocked
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
@@ -2816,7 +2866,7 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Diversify_Armament_Production"
+			log = "[GetLogRoot]: Focus Completed FNG_Diversify_Armament_Production"
 			if = {
 				limit = {
 					has_country_flag = strengthen_army
@@ -2845,8 +2895,6 @@ focus_tree = {
 				uses = 1
 				category = cat_anti_air
 			}
-			set_temp_variable = { ZCPOP = 3 }
-			FNG_ZCPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
@@ -2868,7 +2916,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Expand_Yingkou_Naval_Yard"
+			log = "[GetLogRoot]: Focus Completed FNG_Expand_Yingkou_Naval_Yard"
 			716 = {
 				add_extra_state_shared_building_slots = 1
 				custom_override_tooltip = {
@@ -2892,6 +2940,17 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = yingkou_naval_yard
+			}
+			else = {
+				mio:CHN_naval_industry_organisation = {
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -2913,7 +2972,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 40 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Expand_the_Shenyang_Aerodrome"
+			log = "[GetLogRoot]: Focus Completed FNG_Expand_the_Shenyang_Aerodrome"
 			716 = {
 				add_building_construction = {
 					type = air_base
@@ -2921,8 +2980,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_temp_variable = { ZCPOP = 3 }
-			FNG_ZCPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIRFORCE_BONUS }
 	}
@@ -2934,6 +2991,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Found_the_Shenyang_National_Academy
 		}
+		prerequisite = {
+			focus = FNG_Rearming_the_Northeast
+		}
 		relative_position_id = FNG_Rearming_the_Northeast
 		x = -1
 		y = 1
@@ -2944,7 +3004,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 60 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Expand_the_Shenyang_Arsenal"
+			log = "[GetLogRoot]: Focus Completed FNG_Expand_the_Shenyang_Arsenal"
 			if = {
 				limit = { has_country_flag = strengthen_army }
 				custom_effect_tooltip = BONUS_PP_25
@@ -2958,9 +3018,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_temp_variable = { ZCPOP = 3 }
-			FNG_ZCPOP = yes
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = shenyang_arsenal
+			}
+			else = {
+				mio:CHN_small_arms_industry_organisation = {
+					add_mio_funds_gain_factor = 0.10
+					complete_mio_trait = China_mio_trait_integrated_shenyang
+					set_mio_flag = integrated_shenyang
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 	}
@@ -2971,29 +3041,27 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Fuguo_Qiangbing }
 		prerequisite = { focus = FNG_Suppress_Regionalist_Sentiment }
-		x = 44
+		x = 21
 		y = 1
 		relative_position_id = FNG_Fuguo_Qiangbing
 		ai_will_do = { factor = 90 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Found_the_Shenyang_National_Academy"
+			log = "[GetLogRoot]: Focus Completed FNG_Found_the_Shenyang_National_Academy"
 			add_political_power = 50
 			add_command_power = 50
 			add_war_support = 0.05
-			if = {
-				limit = { has_country_flag = strengthen_army }
-				hidden_effect = { add_political_power = 80 }
-				custom_effect_tooltip = BONUS_PP_80
-			}
 			army_experience = 15
-			add_mastery_bonus = {
+			add_doctrine_cost_reduction = {
 				name = FNG_Found_the_Shenyang_National_Academy
-				bonus = 0.10
-				days = 365
-				folder = land
+				cost_reduction = 0.50
+				uses = 1
+				category = land_doctrine
 			}
+			country_event = fengtian_events.75
 			add_ideas = FNG_shared_army_reform_1
-			country_event = fengtian.75
+			hidden_effect = {
+				country_event = { id = fengtian_events.751 days = 14 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_XP }
 	}
@@ -3011,7 +3079,7 @@ focus_tree = {
 		y = 2
 		ai_will_do = { factor = 50 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Improve_Logistics"
+			log = "[GetLogRoot]: Focus Completed FNG_Improve_Logistics"
 			swap_ideas = {
 				add_idea = FNG_shared_army_reform_3
 				remove_idea = FNG_shared_army_reform_2
@@ -3044,7 +3112,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 50 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Jigyou_Hikaku"
+			log = "[GetLogRoot]: Focus Completed FNG_Jigyou_Hikaku"
 			if = {
 				limit = {
 					has_country_flag = strengthen_army
@@ -3061,8 +3129,6 @@ focus_tree = {
 				category = industry
 			}
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { ZCPOP = -3 }
-			FNG_ZCPOP = yes
 			if = {
 				limit = { has_dlc_lar = yes }
 				JAP = {
@@ -3078,13 +3144,747 @@ focus_tree = {
 	}
 
 	# [KX] 原版军事节点，已并入 KR 军事树
+
+	focus = {
+		id = FNG_Methodical_Approach_To_War
+		icon = GFX_focus_chi_army_reform
+		cost = 5
+		prerequisite = {
+			focus = FNG_Modern_General_Staff
+		}
+		relative_position_id = FNG_Modern_General_Staff
+		x = 0
+		y = 1
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Methodical_Approach_To_War"
+			swap_ideas = {
+				remove_idea = FNG_shikan_clique_army_4
+				add_idea = FNG_shikan_clique_army_5
+			}
+			FNG_improve_army_problem_effect = yes
+		}
+	}
+
+	focus = {
+		id = FNG_Reorganize_the_Coastal_Defence_Forces
+		icon = GFX_goal_FNG_beiyang_navy
+		cost = 8
+
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = -7
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Found_the_Shenyang_National_Academy
+		}
+		prerequisite = {
+			focus = FNG_Rearming_the_Northeast
+		}		
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Reorganize_the_Coastal_Defence_Forces"
+			navy_experience = 15
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = {
+				name = FNG_Reorganize_the_Coastal_Defence_Forces
+				cost_reduction = 1
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = FNG_Zhang_Clique
+		icon = GFX_goal_QIE_baoding
+		cost = 5
+
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Found_the_Shenyang_National_Academy
+		}
+		mutually_exclusive = {
+			focus = FNG_Shikan_Clique_Chosen
+		}
+		ai_will_do = { factor = 70 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Zhang_Clique"
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = { FNG_zhang_clique_army_1 }
+			custom_effect_tooltip = tooltip_white_line
+		}
+	}
+	focus = {
+		id = FNG_Shikan_Clique_Chosen
+		icon = GFX_goal_japanese_officer
+		cost = 5
+
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Found_the_Shenyang_National_Academy
+		}
+		mutually_exclusive = {
+			focus = FNG_Zhang_Clique
+		}
+		ai_will_do = { factor = 70 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Shikan_Clique_Chosen"
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = FNG_shikan_clique_army_1
+			custom_effect_tooltip = tooltip_white_line
+		}
+	}
+	focus = {
+		id = FNG_Promote_New_Non_Commissioned_Officers
+		icon = GFX_goal_agrarian_soldiers
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Zhang_Clique
+		}
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Promote_New_Non_Commissioned_Officers"
+			if = { 
+				limit = { has_idea = FNG_zhang_clique_army_2 }
+				swap_ideas = {
+					remove_idea = FNG_zhang_clique_army_2
+					add_idea = FNG_zhang_clique_army_4
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = FNG_zhang_clique_army_1
+					add_idea = FNG_zhang_clique_army_3
+				}
+			}
+			add_command_power = 10
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = FNG_Train_New_Field_Officers
+		icon = GFX_goal_officers
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Zhang_Clique
+		}
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Train_New_Field_Officers"
+			if = { 
+				limit = { has_idea = FNG_zhang_clique_army_3 }
+				swap_ideas = {
+					remove_idea = FNG_zhang_clique_army_3
+					add_idea = FNG_zhang_clique_army_4
+				}
+			}
+			else = { 
+				swap_ideas = {
+					remove_idea = FNG_zhang_clique_army_1
+					add_idea = FNG_zhang_clique_army_2
+				}
+			}
+
+			add_command_power = 25
+			army_experience = 30
+		}
+	}
+	focus = {
+		id = FNG_Exchange_Programs_With_Japan
+		icon = GFX_goal_align_japan
+		cost = 5
+
+		relative_position_id = FNG_Shikan_Clique_Chosen
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Shikan_Clique_Chosen
+		}
+		available = {
+			FNG_JAP_hostile = no
+			JAP = { is_faction_leader = yes }
+		}
+
+		bypass = {
+			FNG_JAP_hostile = yes
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Exchange_Programs_With_Japan"
+			add_mastery_bonus = {
+				name = FNG_Exchange_Programs_With_Japan
+				bonus = 0.1
+				days = 365
+				track = combat_support
+			}
+			JAP = {
+				add_intel = {
+					target = FNG
+					army_intel = 10
+				}
+			}
+			army_experience = 15
+		}
+	}
+	focus = {
+		id = FNG_Lessons_of_the_Weltkrieg
+		icon = GFX_goal_ENG_lessons_of_the_weltkrieg
+		cost = 5
+
+		relative_position_id = FNG_Shikan_Clique_Chosen
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = FNG_Shikan_Clique_Chosen
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Lessons_of_the_Weltkrieg"
+			army_experience = 15
+			swap_ideas = {
+				remove_idea = FNG_shikan_clique_army_1
+				add_idea = FNG_shikan_clique_army_2
+			}
+			enable_tech_expanded_engineer_corps = yes
+		}
+	}
+	focus = {
+		id = FNG_Modernise_The_Cavalry
+		icon = GFX_goal_SHX_Destiny
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -3
+		y = 2
+
+		prerequisite = {
+			focus = FNG_Promote_New_Non_Commissioned_Officers
+		}
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Modernise_The_Cavalry"
+			if = {
+				limit = { FNG_ma_zhanshan = { is_high_command = yes } }
+				add_ideas = FNG_cavalry_reform_1
+			}
+			else = {
+				add_ideas = FNG_cavalry_reforms
+			}
+		}
+	}
+	focus = {
+		id = FNG_Model_Soldiers
+		icon = GFX_focus_MAN_the_new_fengtian_army
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -1
+		y = 2
+
+		prerequisite = {
+			focus = FNG_Train_New_Field_Officers
+		}
+		prerequisite = {
+			focus = FNG_Promote_New_Non_Commissioned_Officers
+		}
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Model_Soldiers"
+			swap_ideas = {
+				remove_idea = FNG_zhang_clique_army_4
+				add_idea = FNG_zhang_clique_army_5
+			}
+			add_stability = 0.1
+			army_experience = 15
+			add_tech_bonus = {
+				name = FNG_Model_Soldiers
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			enable_tech_assault_battalion = yes
+		}
+	}
+	focus = {
+		id = FNG_Mobilise_The_People
+		icon = GFX_goal_China_Beiyang_Mass_Assault
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -2
+		y = 3
+
+		prerequisite = {
+			focus = FNG_Promote_New_Non_Commissioned_Officers
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Mobilise_The_People"
+			add_war_support = 0.1
+			add_political_power = 50
+			add_manpower = 100000
+			add_timed_idea = {
+				idea = FNG_Mobilisation_Of_The_Northeast
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = FNG_Absorb_Canmou_Clique_Remnants
+		icon = GFX_goal_beiyang_star
+
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -3
+		y = 4
+
+		prerequisite = {
+			focus = FNG_Mobilise_The_People
+		}
+		prerequisite = {
+			focus = FNG_Model_Soldiers
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Absorb_Canmou_Clique_Remnants"
+			swap_ideas = {
+				remove_idea = FNG_zhang_clique_army_5
+				add_idea = FNG_zhang_clique_army_6
+			}
+			FNG_improve_army_problem_effect = yes
+			add_mastery_bonus = {
+				name = FNG_Absorb_Canmou_Clique_Remnants
+				bonus = 0.1
+				days = 365
+				track = operations
+			}
+			army_experience = 15
+		}
+	}
+	focus = {
+		id = FNG_Learn_From_The_Russians
+		icon = GFX_goal_generic_railway_gun
+		cost = 5
+
+		relative_position_id = FNG_Zhang_Clique
+		x = -1
+		y = 4
+
+		prerequisite = {
+			focus = FNG_Model_Soldiers
+		}
+
+		mutually_exclusive = {
+			focus = FNG_Collaborative_Equipment_Design
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Learn_From_The_Russians"
+			if = {
+				limit = { has_dlc_nsb = yes }
+				if = {
+					limit = { NOT = { has_tech = armored_train } }
+					set_technology = { armored_train = 1 }
+				}
+				if = {
+					limit = { NOT = { has_tech = railway_gun } }
+					set_technology = { railway_gun = 1 }
+				}
+				add_ideas = FNG_railway_gun
+				add_timed_idea = {
+					idea = FNG_railway_gun_production
+					days = 100
+				}
+			}
+			if = {
+				limit = { has_dlc_nsb = no }
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 200
+					producer = JAP
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FNG_Militarize_the_Minsheng_Truck
+		icon = GFX_focus_generic_truck
+		cost = 7
+		prerequisite = {
+			focus = FNG_Diversify_Armament_Production
+		}
+		relative_position_id = FNG_Diversify_Armament_Production
+		x = 1
+		y = 1
+		ai_will_do = { factor = 60 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Militarize_the_Minsheng_Truck"
+			if = {
+				limit = { has_country_flag = strengthen_army }
+				custom_effect_tooltip = BONUS_PP_25
+				hidden_effect = { add_political_power = 25 }
+			}
+			if = {
+				limit = { NOT = { has_tech = motorised_infantry } }
+				hidden_effect = { set_technology = { tech_trucks = 1 popup = no } }
+				set_technology = { motorised_infantry = 1 }
+				add_tech_bonus = {
+					name = FNG_Militarize_the_Minsheng_Truck
+					bonus = 1
+					uses = 1
+					category = motorized_equipment
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = FNG_Militarize_the_Minsheng_Truck
+					bonus = 0.75
+					uses = 2
+					category = artillery
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = FNG
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = minsheng_automobile_factory
+			}
+			else = {
+				if = {
+					limit = { mio:CHN_transportation_industry_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = available_mio_tt
+					show_mio_tooltip = CHN_transportation_industry_organisation
+				}
+				mio:CHN_transportation_industry_organisation = {
+					set_mio_flag = CHN_mio_unlocked
+					add_mio_size = 1
+					add_mio_funds = 500
+				}
+			}
+			hidden_effect = {
+				country_event = { id = fengtian_events.32 days = 20 random_days = 30 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = FNG_Modern_General_Staff
+		icon = GFX_goal_generic_army_high_command
+		cost = 5
+		prerequisite = {
+			focus = FNG_Study_Japanese_Infantry_Tactics
+			focus = FNG_New_Generation_Of_Chinese_Officers
+		}
+		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
+		x = 1
+		y = 1
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Modern_General_Staff"
+			swap_ideas = {
+				remove_idea = FNG_shikan_clique_army_3
+				add_idea = FNG_shikan_clique_army_4
+			}
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = old_guard
+						has_trait = trait_engineer
+						is_character = FNG_tang_yulin
+					}
+				}
+				add_trait = { trait = trait_engineer }
+			}
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = old_guard
+						has_trait = trait_engineer
+						is_character = FNG_tang_yulin
+					}
+				}
+				add_trait = { trait = trait_engineer }
+			}
+		}
+	}
+
+	focus = {
+		id = FNG_Modernise_Infantry_Tactics
+		icon = GFX_focus_ETH_peacekeeping_forces
+		cost = 5
+		prerequisite = {
+			focus = FNG_Modernized_Curriculum
+		}
+		relative_position_id = FNG_Promote_Young_Officers
+		x = 2
+		y = 2
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Modernise_Infantry_Tactics"
+			enable_tech_strengthened_support_companies = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = FNG_Modernise_Infantry_Tactics
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = FNG_Modernized_Curriculum
+		icon = GFX_MON_doctrine_III
+		cost = 8
+		prerequisite = {
+			focus = FNG_Promote_Young_Officers
+		}
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = 1
+		y = 3
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Modernized_Curriculum"
+			army_experience = 25
+			add_war_support = 0.10
+			china_add_research_slots = yes
+			if = {
+				limit = {
+					has_country_flag = strengthen_army
+				}
+				hidden_effect = {
+					add_political_power = 50
+				}
+				custom_effect_tooltip = BONUS_PP_50
+			}
+			add_tech_bonus = {
+				name = FNG_Modernized_Curriculum
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+			FNG_improve_army_problem_effect = yes
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+	}
+
+	# [KX] 原版军事节点，已并入 KR 军事树
+
+	focus = {
+		id = FNG_New_Generation_Of_Chinese_Officers
+		icon = GFX_focus_CHI_political_advisors_in_every_division
+		cost = 5
+		prerequisite = {
+			focus = FNG_Lessons_of_the_Weltkrieg
+		}
+		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
+		x = 2
+		y = 0
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_New_Generation_Of_Chinese_Officers"
+			army_experience = 30
+			add_mastery_bonus = {
+				name = FNG_New_Generation_Of_Chinese_Officers
+				bonus = 0.1
+				days = 365
+				track = infantry
+			}
+		}
+	}
+
+	# [KX] 原版军事节点，已并入 KR 军事树
+
+	focus = {
+		id = FNG_Obtain_Japanese_Instructors
+		icon = GFX_goal_japanese_officer
+		cost = 5
+		prerequisite = {
+			focus = FNG_Promote_Young_Officers
+		}
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = -1
+		y = 3
+		available = {
+			JAP = { is_faction_leader = yes }
+		}
+		ai_will_do = { factor = 50 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Obtain_Japanese_Instructors"
+			if = {
+				limit = {
+					has_country_flag = strengthen_army
+				}
+				hidden_effect = {
+					add_political_power = 50
+				}
+				custom_effect_tooltip = BONUS_PP_50
+			}
+			army_experience = 50
+			add_mastery_bonus = {
+				name = FNG_Obtain_Japanese_Instructors
+				bonus = 0.1
+				days = 365
+				folder = land
+			}
+			add_mastery_bonus = {
+				name = FNG_Obtain_Japanese_Instructors
+				bonus = 0.1
+				days = 365
+				track = operations
+			}
+			custom_effect_tooltip = tooltip_white_line
+			JAP = {
+				add_intel = {
+					target = FNG
+					army_intel = 10
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = FNG_Japanese_Instructors
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = FNG_Order_New_Aircraft
+		icon = GFX_MON_light_fighter
+		cost = 7
+		prerequisite = {
+			focus = FNG_Request_Air_Shipment
+		}
+		relative_position_id = FNG_Request_Air_Shipment
+		x = 0
+		y = 1
+		mutually_exclusive = {
+			focus = FNG_Reverse_Engineering_Efforts
+		}
+		available = {
+			JAP = { is_faction_leader = yes }
+		}
+		ai_will_do = { factor = 25 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Order_New_Aircraft"
+			add_tech_bonus = {
+				name = FNG_Order_New_Aircraft
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = FNG_Order_New_Aircraft
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = FNG_Promote_Young_Officers
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = FNG_Zhang_Clique
+		}
+		prerequisite = {
+			focus = FNG_Shikan_Clique_Chosen
+		}
+		relative_position_id = FNG_Found_the_Shenyang_National_Academy
+		x = 0
+		y = 2
+		ai_will_do = { factor = 70 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Promote_Young_Officers"
+			swap_ideas = {
+				add_idea = FNG_shared_army_reform_2
+				remove_idea = FNG_shared_army_reform_1
+			}
+			FNG_improve_army_problem_effect = yes
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FNG_Re-Forming_the_Marine_Corps
+		icon = GFX_goal_VIN_vietnamese_marines
+		cost = 5
+		prerequisite = {
+			focus = FNG_The_Nine_Points_Strategy
+		}
+		relative_position_id = FNG_The_Nine_Points_Strategy
+		x = 0
+		y = 1
+		ai_will_do = { factor = 20 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed FNG_Re-Forming_the_Marine_Corps"
+			add_tech_bonus = {
+				name = FNG_Re-Forming_the_Marine_Corps
+				bonus = 1.50
+				uses = 1
+				category = marine_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
+	}
+
 	focus = {
 		id = FNG_Lessons_from_the_Zhifeng_Wars
 		icon = GFX_goal_FNG_Army_Modern
-		cost = 8
-		prerequisite = { focus = FNG_Found_the_Shenyang_National_Academy }
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -4
+		cost = 3
+		prerequisite = {
+			focus = FNG_Fuguo_Qiangbing
+		}		
+		relative_position_id = FNG_Fuguo_Qiangbing
+		x = 29
 		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
@@ -3117,179 +3917,15 @@ focus_tree = {
 			FNG_RLPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-	}
+	}	
 
-	focus = {
-		id = FNG_Methodical_Approach_To_War
-		icon = GFX_focus_chi_army_reform
-		cost = 5
-		prerequisite = {
-			focus = FNG_Modern_General_Staff
-		}
-		relative_position_id = FNG_Modern_General_Staff
-		x = 0
-		y = 1
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Methodical_Approach_To_War"
-			FNG_improve_army_problem_effect = yes
-		}
-	}
-
-	focus = {
-		id = FNG_Militarize_the_Minsheng_Truck
-		icon = GFX_focus_generic_truck
-		cost = 7
-		prerequisite = {
-			focus = FNG_Diversify_Armament_Production
-		}
-		relative_position_id = FNG_Diversify_Armament_Production
-		x = 1
-		y = 1
-		ai_will_do = { factor = 60 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Militarize_the_Minsheng_Truck"
-			if = {
-				limit = { has_country_flag = strengthen_army }
-				custom_effect_tooltip = BONUS_PP_25
-				hidden_effect = { add_political_power = 25 }
-			}
-			if = {
-				limit = { NOT = { has_tech = motorised_infantry } }
-				hidden_effect = { set_technology = { tech_trucks = 1 popup = no } }
-				set_technology = { motorised_infantry = 1 }
-				add_tech_bonus = {
-					name = FNG_Militarize_the_Minsheng_Truck
-					bonus = 1
-					uses = 1
-					category = motorized_equipment
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = FNG_Militarize_the_Minsheng_Truck
-					bonus = 0.75
-					uses = 2
-					category = artillery
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 100
-				producer = FNG
-			}
-			set_temp_variable = { ZCPOP = 3 }
-			FNG_ZCPOP = yes
-			custom_effect_tooltip = tooltip_white_line
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = FNG_Modern_General_Staff
-		icon = GFX_goal_generic_army_high_command
-		cost = 5
-		prerequisite = {
-			focus = FNG_Study_Japanese_Infantry_Tactics
-			focus = FNG_New_Generation_Of_Chinese_Officers
-		}
-		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
-		x = 1
-		y = 1
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modern_General_Staff"
-			swap_ideas = {
-				remove_idea = FNG_shared_army_reform_2
-				add_idea = FNG_shared_army_reform_3
-			}
-			random_army_leader = {
-				limit = {
-					NOT = {
-						has_trait = old_guard
-						has_trait = trait_engineer
-					}
-				}
-				add_trait = { trait = trait_engineer }
-			}
-			random_army_leader = {
-				limit = {
-					NOT = {
-						has_trait = old_guard
-						has_trait = trait_engineer
-					}
-				}
-				add_trait = { trait = trait_engineer }
-			}
-		}
-	}
-
-	focus = {
-		id = FNG_Modernise_Infantry_Tactics
-		icon = GFX_focus_ETH_peacekeeping_forces
-		cost = 5
-		prerequisite = {
-			focus = FNG_Obtain_Japanese_Instructors
-		}
-		relative_position_id = FNG_Promote_Young_Officers
-		x = 2
-		y = 2
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernise_Infantry_Tactics"
-			enable_tech_strengthened_support_companies = yes
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = FNG_Modernise_Infantry_Tactics
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = {
-		id = FNG_Modernized_Curriculum
-		icon = GFX_MON_doctrine_III
-		cost = 8
-		prerequisite = {
-			focus = FNG_Promote_Young_Officers
-		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 1
-		y = 3
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Modernized_Curriculum"
-			army_experience = 25
-			add_war_support = 0.10
-			china_add_research_slots = yes
-			if = {
-				limit = {
-					has_country_flag = strengthen_army
-				}
-				hidden_effect = {
-					add_political_power = 50
-				}
-				custom_effect_tooltip = BONUS_PP_50
-			}
-			add_tech_bonus = {
-				name = FNG_Modernized_Curriculum
-				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-			FNG_improve_army_problem_effect = yes
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
-	}
-
-	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_Moral_Indoctrination
 		icon = GFX_goal_JAP_samurai_jack
-		cost = 8
-		prerequisite = { focus = FNG_Lessons_from_the_Zhifeng_Wars }
+		cost = 3
+		prerequisite = {
+			focus = FNG_Lessons_from_the_Zhifeng_Wars
+		}		
 		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
 		x = 0
 		y = 1
@@ -3319,40 +3955,18 @@ focus_tree = {
 			FNG_CAPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
-	}
+	}	
 
-	focus = {
-		id = FNG_New_Generation_Of_Chinese_Officers
-		icon = GFX_focus_CHI_political_advisors_in_every_division
-		cost = 5
-		prerequisite = {
-			focus = FNG_Obtain_Japanese_Instructors
-		}
-		relative_position_id = FNG_Study_Japanese_Infantry_Tactics
-		x = 2
-		y = 0
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Generation_Of_Chinese_Officers"
-			army_experience = 30
-			add_mastery_bonus = {
-				name = FNG_New_Generation_Of_Chinese_Officers
-				bonus = 0.1
-				days = 365
-				track = infantry
-			}
-		}
-	}
-
-	# [KX] 原版军事节点，已并入 KR 军事树
 	focus = {
 		id = FNG_New_Model_Army
 		icon = GFX_goal_FNG_fengtian_army
-		cost = 8
-		prerequisite = { focus = FNG_Moral_Indoctrination }
-		relative_position_id = FNG_Moral_Indoctrination
+		cost = 3
+		prerequisite = {
+			focus = FNG_Moral_Indoctrination
+		}		
+		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_New_Model_Army"
@@ -3365,66 +3979,12 @@ focus_tree = {
 			FNG_improve_army_problem_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
-		id = FNG_Obtain_Japanese_Instructors
-		icon = GFX_goal_japanese_officer
-		cost = 5
-		prerequisite = {
-			focus = FNG_Promote_Young_Officers
-		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -1
-		y = 3
-		available = {
-			JAP = { is_faction_leader = yes }
-		}
-		ai_will_do = { factor = 50 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Obtain_Japanese_Instructors"
-			if = {
-				limit = {
-					has_country_flag = strengthen_army
-				}
-				hidden_effect = {
-					add_political_power = 50
-				}
-				custom_effect_tooltip = BONUS_PP_50
-			}
-			army_experience = 50
-			add_mastery_bonus = {
-				name = FNG_Obtain_Japanese_Instructors
-				bonus = 0.1
-				days = 365
-				folder = land
-			}
-			add_mastery_bonus = {
-				name = FNG_Obtain_Japanese_Instructors
-				bonus = 0.1
-				days = 365
-				track = operations
-			}
-			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { ZCPOP = -1 }
-			FNG_ZCPOP = yes
-			JAP = {
-				add_intel = {
-					target = FNG
-					army_intel = 10
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_ideas = FNG_Japanese_Instructors
-		}
-		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
-	}
+	}	
 
 	focus = {
 		id = FNG_One_Army_One_Republic
 		icon = GFX_goal_zhang_rifle
 		cost = 8
-		prerequisite = { focus = FNG_Promote_Young_Officers }
 		mutually_exclusive = { focus = FNG_The_Generals_Know_Best }
 		available = {
 			OR = {
@@ -3432,9 +3992,12 @@ focus_tree = {
 				has_completed_focus = FNG_Redefine_Provincial_Obligations
 			}
 		}
-		relative_position_id = FNG_Promote_Young_Officers
-		x = -3
-		y = 2
+		prerequisite = {
+			focus = FNG_New_Model_Army
+		}		
+		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
+		x = 1
+		y = 3
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_One_Army_One_Republic"
@@ -3448,108 +4011,48 @@ focus_tree = {
 			set_country_flag = regional_generals_angered
 			hidden_effect = { country_event = { id = fengtian.254 days = 250 } }
 		}
-	}
+	}	
+
 
 	focus = {
-		id = FNG_Order_New_Aircraft
-		icon = GFX_MON_light_fighter
-		cost = 7
-		prerequisite = {
-			focus = FNG_Request_Air_Shipment
-		}
-		relative_position_id = FNG_Request_Air_Shipment
-		x = 0
-		y = 1
-		mutually_exclusive = {
-			focus = FNG_Reverse_Engineering_Efforts
-		}
+		id = FNG_The_Generals_Know_Best
+		icon = GFX_goal_chinese_instructors
+		cost = 8
+		mutually_exclusive = { focus = FNG_One_Army_One_Republic }
 		available = {
-			JAP = { is_faction_leader = yes }
+			OR = {
+				has_completed_focus = FNG_Centralize_Provincial_Revenues
+				has_completed_focus = FNG_Redefine_Provincial_Obligations
+			}
 		}
-		ai_will_do = { factor = 25 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Order_New_Aircraft"
-			add_tech_bonus = {
-				name = FNG_Order_New_Aircraft
-				bonus = 1
-				uses = 1
-				category = light_fighter
-			}
-			add_tech_bonus = {
-				name = FNG_Order_New_Aircraft
-				bonus = 1
-				uses = 1
-				category = cas_bomber
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
-			set_temp_variable = { ZCPOP = -5 }
-			FNG_ZCPOP = yes
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-	}
-
-	focus = {
-		id = FNG_Promote_Young_Officers
-		icon = GFX_focus_generic_military_mission
-		cost = 5
 		prerequisite = {
-			focus = FNG_Lessons_from_the_Zhifeng_Wars
-		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = 0
-		y = 2
-		ai_will_do = { factor = 70 }
+			focus = FNG_New_Model_Army
+		}		
+		relative_position_id = FNG_Lessons_from_the_Zhifeng_Wars
+		x = -1
+		y = 3
+		ai_will_do = { factor = 80 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Promote_Young_Officers"
-			swap_ideas = {
-				add_idea = FNG_shared_army_reform_2
-				remove_idea = FNG_shared_army_reform_1
-			}
-			FNG_improve_army_problem_effect = yes
-			add_political_power = 50
-			custom_effect_tooltip = tooltip_white_line
+			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Generals_Know_Best"
+			add_ideas = FNG_Traditional_Command_Structure
+			add_ideas = FNG_primacy_of_the_loyalists
 		}
-	}
-
-	focus = {
-		id = FNG_Re-Forming_the_Marine_Corps
-		icon = GFX_goal_VIN_vietnamese_marines
-		cost = 5
-		prerequisite = {
-			focus = FNG_The_Nine_Points_Strategy
-		}
-		relative_position_id = FNG_The_Nine_Points_Strategy
-		x = 0
-		y = 1
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Re-Forming_the_Marine_Corps"
-			add_tech_bonus = {
-				name = FNG_Re-Forming_the_Marine_Corps
-				bonus = 1.50
-				uses = 1
-				category = marine_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
-	}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
+	}	
 
 	focus = {
 		id = FNG_Rearming_the_Northeast
 		icon = GFX_goal_CAN_New_Munitions_Plants
-		cost = 5
+		cost = 3
 		prerequisite = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 35
+		x = 12
 		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Rearming_the_Northeast"
+			log = "[GetLogRoot]: Focus Completed FNG_Rearming_the_Northeast"
 			add_political_power = 20
 			if = {
 				limit = {
@@ -3578,7 +4081,7 @@ focus_tree = {
 		y = 2
 		ai_will_do = { factor = 20 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Regular_River_Patrols"
+			log = "[GetLogRoot]: Focus Completed FNG_Regular_River_Patrols"
 			navy_experience = 30
 			add_mastery_bonus = {
 				name = FNG_Regular_River_Patrols
@@ -3591,30 +4094,6 @@ focus_tree = {
 	}
 
 	# [KX] 原版军事节点，已并入 KR 军事树
-	focus = {
-		id = FNG_Reorganize_the_Coastal_Defence_Forces
-		icon = GFX_goal_FNG_beiyang_navy
-		cost = 5
-		prerequisite = {
-			focus = FNG_Found_the_Shenyang_National_Academy
-		}
-		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -7
-		y = 1
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reorganize_the_Coastal_Defence_Forces"
-			navy_experience = 15
-			add_war_support = 0.05
-			add_doctrine_cost_reduction = {
-				name = FNG_Reorganize_the_Coastal_Defence_Forces
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
-			}
-		}
-		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
-	}
 
 	focus = {
 		id = FNG_Request_Air_Shipment
@@ -3633,7 +4112,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 70 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Request_Air_Shipment"
+			log = "[GetLogRoot]: Focus Completed FNG_Request_Air_Shipment"
 			if = {
 				limit = { has_country_flag = strengthen_army }
 				custom_effect_tooltip = BONUS_PP_50
@@ -3644,8 +4123,6 @@ focus_tree = {
 				amount = 150
 				producer = JAP
 			}
-			set_temp_variable = { ZCPOP = -3 }
-			FNG_ZCPOP = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_aat = no }
@@ -3676,7 +4153,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 40 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Reverse_Engineering_Efforts"
+			log = "[GetLogRoot]: Focus Completed FNG_Reverse_Engineering_Efforts"
 			add_tech_bonus = {
 				name = FNG_Reverse_Engineering_Efforts
 				bonus = 0.50
@@ -3687,8 +4164,6 @@ focus_tree = {
 				type = arms_factory
 				level = 1
 			}
-			set_temp_variable = { ZCPOP = 5 }
-			FNG_ZCPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 	}
@@ -3708,7 +4183,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 30 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Shoutai_Tactics"
+			log = "[GetLogRoot]: Focus Completed FNG_Shoutai_Tactics"
 			air_experience = 25
 			add_mastery_bonus = {
 				name = FNG_Shoutai_Tactics
@@ -3725,17 +4200,17 @@ focus_tree = {
 		icon = GFX_goal_JAP_Army
 		cost = 5
 		prerequisite = {
-			focus = FNG_Obtain_Japanese_Instructors
+			focus = FNG_Exchange_Programs_With_Japan
 		}
 		relative_position_id = FNG_Obtain_Japanese_Instructors
 		x = 4
 		y = 0
 		ai_will_do = { factor = 50 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Study_Japanese_Infantry_Tactics"
+			log = "[GetLogRoot]: Focus Completed FNG_Study_Japanese_Infantry_Tactics"
 			swap_ideas = {
-				remove_idea = FNG_shared_army_reform_1
-				add_idea = FNG_shared_army_reform_2
+				remove_idea = FNG_shikan_clique_army_2
+				add_idea = FNG_shikan_clique_army_3
 			}
 			add_tech_bonus = {
 				name = FNG_Study_Japanese_Infantry_Tactics
@@ -3760,7 +4235,7 @@ focus_tree = {
 		y = 1
 		ai_will_do = { factor = 20 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_China_Flying_Corps"
+			log = "[GetLogRoot]: Focus Completed FNG_The_China_Flying_Corps"
 			air_experience = 35
 			add_doctrine_cost_reduction = {
 				name = FNG_The_China_Flying_Corps
@@ -3773,30 +4248,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FNG_The_Generals_Know_Best
-		icon = GFX_goal_chinese_instructors
-		cost = 8
-		prerequisite = { focus = FNG_Promote_Young_Officers }
-		mutually_exclusive = { focus = FNG_One_Army_One_Republic }
-		available = {
-			OR = {
-				has_completed_focus = FNG_Centralize_Provincial_Revenues
-				has_completed_focus = FNG_Redefine_Provincial_Obligations
-			}
-		}
-		relative_position_id = FNG_Promote_Young_Officers
-		x = -5
-		y = 2
-		ai_will_do = { factor = 80 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Generals_Know_Best"
-			add_ideas = FNG_Traditional_Command_Structure
-			add_ideas = FNG_primacy_of_the_loyalists
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
-	}
-
-	focus = {
 		id = FNG_The_Kwantung_Protocol
 		icon = GFX_goal_japanese_instructors
 		cost = 4
@@ -3804,7 +4255,7 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 53
+		x = 35
 		y = 1
 		available = {
 			has_idea = FNG_The_Kwantung_Army
@@ -3812,7 +4263,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 70 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Kwantung_Protocol"
+			log = "[GetLogRoot]: Focus Completed FNG_The_Kwantung_Protocol"
 			if = {
 				limit = {
 					has_country_flag = strengthen_army
@@ -3831,8 +4282,6 @@ focus_tree = {
 			unlock_decision_tooltip = FNG_Request_Japanese_Artillery
 			unlock_decision_tooltip = FNG_Request_Japanese_Tanks
 			unlock_decision_tooltip = FNG_Study_Japanese_Manufacturing_Methods
-			set_temp_variable = { ZCPOP = -3 }
-			FNG_ZCPOP = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3855,7 +4304,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 40 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Nine_Points_Strategy"
+			log = "[GetLogRoot]: Focus Completed FNG_The_Nine_Points_Strategy"
 			716 = {
 				custom_override_tooltip = {
 					add_building_construction = {
@@ -3911,7 +4360,7 @@ focus_tree = {
 		}
 		ai_will_do = { factor = 60 }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FNG_Zaibatsu_Investments"
+			log = "[GetLogRoot]: Focus Completed FNG_Zaibatsu_Investments"
 			if = {
 				limit = { has_country_flag = strengthen_army }
 				custom_effect_tooltip = BONUS_PP_25
@@ -3930,8 +4379,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_temp_variable = { ZCPOP = -5 }
-			FNG_ZCPOP = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_aat = no }
@@ -4812,8 +5259,8 @@ focus_tree = {
 			has_country_flag = FNG_conference_federalist_support
 			has_completed_focus = FNG_The_Ultimatum
 		}
-		x = 30
-		y = -9
+		x = -3
+		y = 6
 		relative_position_id = FNG_The_Ultimatum
 		ai_will_do = { factor = 80 }
 		completion_reward = {

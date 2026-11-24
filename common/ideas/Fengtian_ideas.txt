@@ -2140,6 +2140,278 @@ ideas = {
 				naval_equipment = 0.1
 			}
 		}
+		# ===== KR 派系军官 idea（zhang/shikan 1-6/1-5），国策叠 buff 用 =====
+		# 名称统一走 FNG_zhang_clique_army / FNG_shikan_clique_army，allowed = always no 只靠国策授予
+		FNG_zhang_clique_army_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_1" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.05
+			}
+		}
+
+		FNG_zhang_clique_army_2 = { #new field officers
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_2" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.05
+				army_infantry_attack_factor = 0.075
+				army_infantry_defence_factor = 0.075
+			}
+		}
+
+		FNG_zhang_clique_army_3 = { # Non-Commissioned Officers
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_3" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.05
+				army_strength_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		FNG_zhang_clique_army_4 = { # Non-Commissioned Officers + new field officers
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_4" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.05
+				army_strength_factor = 0.1
+				army_morale_factor = 0.05
+				army_infantry_attack_factor = 0.075
+				army_infantry_defence_factor = 0.075
+				breakthrough_factor = 0.05
+			}
+		}
+
+		FNG_zhang_clique_army_5 = { #new field officers + Non-Commissioned Officers + model soldiers
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_5" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.075
+				army_infantry_attack_factor = 0.125
+				army_infantry_defence_factor = 0.125
+				breakthrough_factor = 0.125
+				army_strength_factor = 0.125
+				army_morale_factor = 0.075
+			}
+		}
+
+		FNG_zhang_clique_army_6 = { #absorb canmou clique (final)
+			on_add = { log = "[GetLogRoot]: add idea FNG_zhang_clique_army_6" }
+			name = FNG_zhang_clique_army
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.1
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				breakthrough_factor = 0.15
+				army_strength_factor = 0.15
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		FNG_shikan_clique_army_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shikan_clique_army_1" }
+			name = FNG_shikan_clique_army
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				coordination_bonus = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+
+		FNG_shikan_clique_army_2 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shikan_clique_army_2" }
+			name = FNG_shikan_clique_army
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				coordination_bonus = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+
+		FNG_shikan_clique_army_3 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shikan_clique_army_3" }
+			name = FNG_shikan_clique_army
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.075
+				coordination_bonus = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				land_night_attack = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+
+		FNG_shikan_clique_army_4 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shikan_clique_army_4" }
+			name = FNG_shikan_clique_army
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.125
+				coordination_bonus = 0.125
+				max_planning = 0.15
+				planning_speed = 0.1
+				land_night_attack = 0.075
+				experience_gain_army = 0.05
+			}
+		}
+
+		FNG_shikan_clique_army_5 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shikan_clique_army_5" }
+			name = FNG_shikan_clique_army
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.15
+				coordination_bonus = 0.15
+				max_planning = 0.2
+				planning_speed = 0.15
+				land_night_attack = 0.15
+				experience_gain_army = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		FNG_Mobilisation_Of_The_Northeast = {
+		on_add = { log = "[GetLogRoot]: add idea FNG_Mobilisation_Of_The_Northeast" }
+		picture = man_five_year_plan_tank
+		allowed = { always = no }
+		modifier = {
+		industrial_capacity_factory = 0.1
+		army_morale_factor = 0.05
+		}
+		}
+
+		FNG_railway_gun_production = {
+		on_add = { log = "[GetLogRoot]: add idea FNG_railway_gun_production" }
+		picture = FRA_factory_strikes
+		allowed = { always = no }
+		modifier = {
+		consumer_goods_factor = 0.15
+		industrial_capacity_factory = -0.15
+		}
+		on_remove = {
+		log = "[GetLogRoot]: remove idea FNG_railway_gun_production"
+		create_railway_gun = { equipment = railway_gun_equipment_1 }
+		}
+		}
+
+		FNG_shared_army_reform_zhang_clique_artillery = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shared_army_reform_zhang_clique_artillery" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.15
+					breakthrough = 0.15
+					instant = yes
+				}
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.1
+				army_artillery_defence_factor = 0.05
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				experience_gain_army_unit_factor = 0.1
+				army_morale_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+
+		FNG_shared_army_reform_shikan_clique_artillery = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_shared_army_reform_shikan_clique_artillery" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+			modifier = {
+				army_artillery_attack_factor = 0.2
+				army_artillery_defence_factor = 0.15
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				experience_gain_army_unit_factor = 0.1
+				army_morale_factor = 0.05
+				experience_gain_army = 0.05
+			}
+		}
+
+		# ===== [AI 新增 2026-11-24] 决议「东北军」页配套 idea =====
+		# 军官团轮训三段（FNG_Officer_Corps_Drills_1~3 决议授予，swap 升级）
+		FNG_officer_corps_drills_1 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_officer_corps_drills_1" }
+			name = FNG_officer_corps_drills
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.025
+				army_infantry_attack_factor = 0.025
+			}
+		}
+		FNG_officer_corps_drills_2 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_officer_corps_drills_2" }
+			name = FNG_officer_corps_drills
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.05
+				army_infantry_attack_factor = 0.05
+			}
+		}
+		FNG_officer_corps_drills_3 = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_officer_corps_drills_3" }
+			name = FNG_officer_corps_drills
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_Factor = 0.075
+				army_infantry_attack_factor = 0.075
+				breakthrough_factor = 0.025
+			}
+		}
+		# 冬季大演习（决议重复授予，180 天临时）
+		FNG_winter_manoeuvres_idea = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_winter_manoeuvres_idea" }
+			name = FNG_winter_manoeuvres_idea
+			picture = generic_army
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army = 0.1
+				army_morale_factor = 0.05
+				army_org_Factor = 0.05
+			}
+		}
+		# 军械库扩建（一次性决议授予，永久）
+		FNG_arsenal_depot_idea = {
+			on_add = { log = "[GetLogRoot]: add idea FNG_arsenal_depot_idea" }
+			name = FNG_arsenal_depot_idea
+			picture = man_five_year_plan_tank
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.03
+				experience_gain_army = 0.05
+			}
+		}
 	}
 
 }
