@@ -955,11 +955,12 @@ focus_tree = {
 		id = FNG_Restore_1923_Constitution
 		icon = GFX_goal_MON_Peoples_Constitution
 		cost = 8
-		prerequisite = { focus = FNG_Unification_through_Negotiation }
-		x = 0
-		y = 2
-		relative_position_id = FNG_Unification_through_Negotiation
+		x = 5
+		y = 23
 		ai_will_do = { factor = 80 }
+		available = {
+			always = no
+		}		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Restore_1923_Constitution"
 			add_political_power = 50
@@ -1149,7 +1150,6 @@ focus_tree = {
 		cost = 8
 		available = { has_country_flag = FNG_conference_federalist_support }
 		prerequisite = { focus = FNG_Revived_Rural_Reconstruction }
-		mutually_exclusive = { focus = FNG_Centralize_Provincial_Revenues }
 		x = 0
 		y = 1
 		relative_position_id = FNG_Revived_Rural_Reconstruction
@@ -1515,7 +1515,6 @@ focus_tree = {
 		prerequisite = { focus = FNG_Crush_Flies_and_Capture_Pigs }
 		prerequisite = { focus = FNG_Incorporate_Local_Patronage_Networks }
 		prerequisite = { focus = FNG_Reclaim_the_Railways }
-		mutually_exclusive = { focus = FNG_Redefine_Provincial_Obligations }
 		x = 0
 		y = 1
 		relative_position_id = FNG_Incorporate_Local_Patronage_Networks
@@ -1565,17 +1564,11 @@ focus_tree = {
 		id = FNG_The_Ultimatum
 		icon = GFX_focus_AST_war_japan
 		cost = 8
-		prerequisite = {
-			focus = FNG_Redefine_Provincial_Obligations
-			focus = FNG_Centralize_Provincial_Revenues
-		}
 		mutually_exclusive = {
-			focus = FNG_rebirth_of_the_dragon_throne
 			focus = FNG_panasian_china
 		}
-		x = 0
-		y = 1
-		relative_position_id = FNG_Centralize_Provincial_Revenues
+		x = 35
+		y = 23
 		ai_will_do = { 
 			factor = 80 
 			modifier = {
@@ -1587,6 +1580,7 @@ focus_tree = {
 			}
 		}
 		available = {
+			always = no
 			FNG_JAP_not_hostile = yes
 			NOT = { has_global_flag = JAP_Fading_Sun }
 			custom_trigger_tooltip = {
@@ -1887,9 +1881,11 @@ focus_tree = {
 		id = FNG_The_Question_of_the_Presidency
 		icon = GFX_goal_RUS_Strengthen_Presidential_Powers
 		cost = 8
-		prerequisite = { focus = FNG_Unification_through_Subjugation }
 		x = 0
-		y = 1
+		y = 28
+		available = {
+			always = no
+		}		
 		select_effect = {
 			country_event = {
 				id = fengtian.287
@@ -1897,7 +1893,6 @@ focus_tree = {
 				random = 144
 			}
 		}
-		relative_position_id = FNG_Unification_through_Subjugation
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_The_Question_of_the_Presidency"
@@ -2037,10 +2032,8 @@ focus_tree = {
 			has_country_flag = FNG_zuolin_bonapartism
 			has_completed_focus = FNG_The_Ultimatum
 		}
-		#prerequisite = { focus = FNG_The_Ultimatum }
-		x = -11
-		y = 6
-		relative_position_id = FNG_The_Ultimatum
+		x = 10
+		y = 23
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_A_Chinese_Napoleon"
@@ -2906,6 +2899,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FNG_Reorganize_the_Coastal_Defence_Forces
 		}
+		prerequisite = {
+			focus = FNG_Rearming_the_Northeast
+		}			
 		relative_position_id = FNG_Rearming_the_Northeast
 		x = 1
 		y = 2
@@ -3177,10 +3173,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = FNG_Found_the_Shenyang_National_Academy
-		}
-		prerequisite = {
-			focus = FNG_Rearming_the_Northeast
-		}		
+		}	
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed FNG_Reorganize_the_Coastal_Defence_Forces"
@@ -4401,16 +4394,13 @@ focus_tree = {
 		id = FNG_rebirth_of_the_dragon_throne
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		cost = 5
-		prerequisite = { focus = FNG_Treaty_of_Friendship_and_Cooperation }
-		mutually_exclusive = {
-			focus = FNG_The_Ultimatum
-			focus = FNG_panasian_china
+		available = {
+			always = no
+			has_global_flag = MON_FNG_new_mandate_enforced
 		}
-		available = { has_global_flag = MON_FNG_new_mandate_enforced }
 		bypass = { hidden_trigger = { has_global_flag = MON_FNG_new_mandate_enforced } }
-		x = 3
-		y = 1
-		relative_position_id = FNG_Treaty_of_Friendship_and_Cooperation
+		x = 24
+		y = 23
 		ai_will_do = { factor = 90 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_rebirth_of_the_dragon_throne"
@@ -5070,8 +5060,8 @@ focus_tree = {
 		id = FNG_panasian_china
 		icon = GFX_goal_ANQ_panasian
 		cost = 8
-		prerequisite = { focus = FNG_Treaty_of_Friendship_and_Cooperation }
 		available = {
+			always = no
 			has_country_leader = {
 				name = "Yang Yuting"
 				ruling_only = yes
@@ -5079,11 +5069,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = FNG_The_Ultimatum
-			focus = FNG_rebirth_of_the_dragon_throne
 		}
-		x = -1
-		y = 1
-		relative_position_id = FNG_Treaty_of_Friendship_and_Cooperation
+		x = 30
+		y = 23
 		ai_will_do = { factor = 90 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_panasian_china"
@@ -5259,9 +5247,8 @@ focus_tree = {
 			has_country_flag = FNG_conference_federalist_support
 			has_completed_focus = FNG_The_Ultimatum
 		}
-		x = -3
-		y = 6
-		relative_position_id = FNG_The_Ultimatum
+		x = 17
+		y = 23
 		ai_will_do = { factor = 80 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FNG_Building_the_Road_to_Federalism"

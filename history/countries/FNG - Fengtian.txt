@@ -196,23 +196,23 @@ add_equipment_to_stockpile = {
 }
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = paternal_autocrat
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	totalist = 0
-	radical_socialist = 0
-	syndicalist = 0
-	social_democrat = 0
-	social_liberal = 0
-	market_liberal = 14
-	social_conservative = 18
-	authoritarian_democrat = 40
-	paternal_autocrat = 28
-	national_populist = 0
+	totalist = 1
+	radical_socialist = 2
+	syndicalist = 1
+	social_democrat = 4
+	social_liberal = 3
+	market_liberal = 15
+	social_conservative = 10
+	authoritarian_democrat = 22
+	paternal_autocrat = 37
+	national_populist = 5
 }
 
 #set_variable = { FNG.FNG_NEA_mobilization_speed = -0.5 }
@@ -289,26 +289,25 @@ create_country_leader = {
 	ideology = soccon_oligarchy_subtype
 }
 create_country_leader = {
-	name = "Zhang Zuolin"
+	name = "张作霖"
 	desc = "POLITICS_ZHANG_ZUOLIN_DESC"
 	picture = "gfx/leaders/FNG/Portrait_FNG_Zhang_Zuolin.png"
 	expire = "1.1.1"
 	ideology = authdem_warlordism_subtype
 }
 create_country_leader = {
-	name = "Zhang Zuolin"
+	name = "张作霖"
 	desc = "POLITICS_ZHANG_ZUOLIN_DESC"
 	picture = "gfx/leaders/FNG/Portrait_FNG_Zhang_Zuolin.png"
 	expire = "1.1.1"
 	ideology = pataut_warlordism_subtype
 }
-#create_country_leader = {
-#	name = "Hóngwu"
-#	desc = "POLITICS_HONGWU_DESC"
-#	picture = "gfx/leaders/LEC/Portrait_LEC_Hongwu.png"
-#	expire = "1.1.1"
-#	ideology = natpop_warlordism_subtype
-#}
+create_country_leader = {
+	name = "山口重治"
+	picture = "gfx/leaders/FNG/Portrait_JAP_Yamaguchi_Juuji.png"
+	expire = "1.1.1"
+	ideology = natpop_kodoism_subtype
+}
 set_variable = { kr_china_provinceintegration_cost_small = 50 }
 set_variable = { kr_china_provinceintegration_cost_medium = 75 }
 set_variable = { kr_china_provinceintegration_cost_large = 100 }
