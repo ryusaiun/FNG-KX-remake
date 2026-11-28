@@ -268,32 +268,53 @@ FNG_recalculate_mantetsu_effects = yes
 ### Japanese Tensions
 set_variable = { FNG_japanese_tensions = 0 }
 set_variable = { FNG_japanese_tensions_frame = 0 }
-
 create_country_leader = {
-	name = "Guan Xiangying"
-	picture = "gfx/leaders/FNG/Portrait_FNG_Guan_Xiangying.png"
+	name = "吴廷康"
+	picture = "gfx/leaders/FNG/Portrait_RUS_Grigori_Voitinsky.png"
 	expire = "1.1.1"
-	ideology = syn_tridemism_subtype
-	traits = { our_right_to_survive }
+	ideology = authcom_subtype
 }
 create_country_leader = {
-	name = "Ruan Zhenduo"
-	picture = "gfx/leaders/FNG/Portrait_FNG_Ruan_Zhenduo.png"
+	name = "宁武"
+	picture = "gfx/leaders/FNG/Portrait_FNG_Ning_Wu.png"
 	expire = "1.1.1"
-	ideology = pan_asianism_subtype
+	ideology = radsoc_tridemism_subtype
 }
 create_country_leader = {
-	name = "Liang Shiyi"
-	picture = "gfx/leaders/FNG/Portrait_FNG_Liang_Shiyi.png"
+	name = "地下组织"
+	picture = "gfx/leaders/FNG/Portrait_FNG_Wokers.png"
+	expire = "1.1.1"
+	ideology = anarcho_syndicalist_subtype
+}
+create_country_leader = {
+	name = "阎宝航"
+	picture = "gfx/leaders/FNG/Portrait_FNG_Yan_Baohang.png"
+	expire = "1.1.1"
+	ideology = socdem_christian_socialism_subtype
+}
+create_country_leader = {
+	name = "共和人士"
+	picture = "gfx/leaders/FNG/Portrait_FNG_National_Assembly.png"
+	expire = "1.1.1"
+	ideology = national_liberalism_subtype
+}
+create_country_leader = {
+	name = "满铁理事会"
+	picture = "gfx/leaders/FNG/Portrait_FNG_SMR.png"
+	expire = "1.1.1"
+	ideology = marlib_colonial_govt_subtype
+}
+create_country_leader = {
+	name = "章宗祥"
+	picture = "gfx/leaders/FNG/FNG_zhang_zongxiang.png"
 	expire = "1.1.1"
 	ideology = soccon_oligarchy_subtype
 }
 create_country_leader = {
-	name = "张作霖"
-	desc = "POLITICS_ZHANG_ZUOLIN_DESC"
-	picture = "gfx/leaders/FNG/Portrait_FNG_Zhang_Zuolin.png"
+	name = "王揖唐"
+	picture = "gfx/leaders/FNG/FNG_wang_yitang.png"
 	expire = "1.1.1"
-	ideology = authdem_warlordism_subtype
+	ideology = authdem_national_conservative_subtype
 }
 create_country_leader = {
 	name = "张作霖"
@@ -306,7 +327,7 @@ create_country_leader = {
 	name = "山口重治"
 	picture = "gfx/leaders/FNG/Portrait_JAP_Yamaguchi_Juuji.png"
 	expire = "1.1.1"
-	ideology = natpop_kodoism_subtype
+	ideology = natpop_pan_asianism_subtype
 }
 set_variable = { kr_china_provinceintegration_cost_small = 50 }
 set_variable = { kr_china_provinceintegration_cost_medium = 75 }
