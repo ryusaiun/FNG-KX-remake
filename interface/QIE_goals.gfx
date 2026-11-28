@@ -1,0 +1,755 @@
+SpriteTypes = {
+	spriteType = {
+		name = "GFX_goal_QIE_IGfarben"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_IGfarben.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xiang_yin_hang_jie_kuan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xiang_yin_hang_jie_kuan.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_goal_QIE_national_education_issue"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_national_education_issue.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_land_revolution_plan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_land_revolution_plan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_hong_wei_de_ji_nian_bei"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_hong_wei_de_ji_nian_bei.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_downsizing_problem"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_downsizing_problem.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_fiscal_and_tax_issues"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_fiscal_and_tax_issues.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zai_yi_sheng_quan_issue"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zai_yi_sheng_quan_issue.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zong_tong_de_quan_li"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zong_tong_de_quan_li.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_political_system_issue"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_political_system_issue.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_radical_party_issue"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_radical_party_issue.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_democracy_sustained_by_morality"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_democracy_sustained_by_morality.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_China_CSP"
+		texturefile = "gfx/interface/goals/China_CSP.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_congressional_issue"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_congressional_issue.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_GXC_absolute_freedom_in_education"
+		texturefile = "gfx/interface/goals/MQ_GXC/GXC_absolute_freedom_in_education.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_chang_xin_shen_hui_jiu_ji"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chang_xin_shen_hui_jiu_ji.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_GXC_pursuing_a_federal_democracy"
+		texturefile = "gfx/interface/goals/MQ_GXC/GXC_pursuing_a_federal_democracy.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_GXC_a_multi_partisan_democracy"
+		texturefile = "gfx/interface/goals/MQ_GXC/GXC_a_multi_partisan_democracy.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wei_guang_dong_da_kai_da_men"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wei_guang_dong_da_kai_da_men.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_shi_dai_fei_teng_qi_dai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_shi_dai_fei_teng_qi_dai.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_shen_pan_pan_guo_zei"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_shen_pan_pan_guo_zei.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ti_xie_qing_nian_dang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ti_xie_qing_nian_dang.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_chong_shi_guo_jia_yu_min_zu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chong_shi_guo_jia_yu_min_zu.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_han_mi_er_dun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_han_mi_er_dun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_he_bing_di_qiao_bu_men"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_he_bing_di_qiao_bu_men.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_shi_xing_bi_zhi_gai_ge"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_shi_xing_bi_zhi_gai_ge.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_cai_zheng_li_guo"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_cai_zheng_li_guo.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_run_hua_zheng_zhi_ji_qi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_run_hua_zheng_zhi_ji_qi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ren_ren_you_shui_jiao"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ren_ren_you_shui_jiao.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zu_jian_zong_yang_yin_hang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zu_jian_zong_yang_yin_hang.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_chong_su_wo_men_de_tian_yuan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chong_su_wo_men_de_tian_yuan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_bai_tuo_yi_si_xing_tai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bai_tuo_yi_si_xing_tai.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_xing_zhi_zhi_de_guo_hui"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_xing_zhi_zhi_de_guo_hui.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ru_jia_dao_de_jiao_yu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ru_jia_dao_de_jiao_yu.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_bu_shou_jun_ren_du_hai_de_zheng_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bu_shou_jun_ren_du_hai_de_zheng_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_hua_bei_te_shu_lun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_hua_bei_te_shu_lun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_jie_ke_xun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_jie_ke_xun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_chong_su_xin_xian_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chong_su_xin_xian_fa.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_not_generic_militarism_but_yes"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_not_generic_militarism_but_yes.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_guo_fu_chong_bai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_fu_chong_bai.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_hua_sheng_dun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_hua_sheng_dun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_bao_wei_zi_you_de_xin_xian_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bao_wei_zi_you_de_xin_xian_fa.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_jian_xing_gong_bing_ji_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jian_xing_gong_bing_ji_hua.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wei_zheng_fu_dian_zui_zhuang_shi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wei_zheng_fu_dian_zui_zhuang_shi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_fa_zhi_jiao_yu_li_nian"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_fa_zhi_jiao_yu_li_nian.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ming_quan_he_zhi_quan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ming_quan_he_zhi_quan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_cai_zheng_tou_ming_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_cai_zheng_tou_ming_hua.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wu_zheng_dang_de_gong_he_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wu_zheng_dang_de_gong_he_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_xin_shi_dai_hao_ren_goverment"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xin_shi_dai_hao_ren_goverment.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_yang_jiao_he_fa_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_yang_jiao_he_fa_hua.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_mai_di_xun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_mai_di_xun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_nong_cun_min_zong_jiao_yu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_nong_cun_min_zong_jiao_yu.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wan_jiu_po_chan_de_xiang_cun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wan_jiu_po_chan_de_xiang_cun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_gong_hui_jiu_shi_qing_ke_chi_fan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_hui_jiu_shi_qing_ke_chi_fan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ai_guo_de_zhi_ye_pei_xun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ai_guo_de_zhi_ye_pei_xun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zou_chu_jiu_ri_de_yin_ying"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zou_chu_jiu_ri_de_yin_ying.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_de_fu_lan_ke_lin"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_de_fu_lan_ke_lin.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_xiang_xiang_jian_pai_gan_lan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xiang_xiang_jian_pai_gan_lan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_xian_lao_bing_zhi_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xian_lao_bing_zhi_yi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_liang_dang_he_bing"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_liang_dang_he_bing.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_guo_jia_she_hui"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_jia_she_hui.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_li_xin_zhi_guang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_li_xin_zhi_guang.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_she_hui_yu_zheng_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_she_hui_yu_zheng_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_jie_gou_guo_jia_shen_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jie_gou_guo_jia_shen_hua.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_fu_hui_kong_jia_dian"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_fu_hui_kong_jia_dian.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_hui_shan_mi_wu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_hui_shan_mi_wu.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wei_xi_duo_yuan_zheng_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wei_xi_duo_yuan_zheng_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_mao_yi_bao_hu_zhu_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_mao_yi_bao_hu_zhu_yi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ke_xue_shui_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ke_xue_shui_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_chan_jie_ji_de_sheng_li"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_chan_jie_ji_de_sheng_li.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_wu_wei_zhong_yong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wu_wei_zhong_yong.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_yi_li_zhi_guo"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_yi_li_zhi_guo.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_qiang_you_li_zheng_fu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_qiang_you_li_zheng_fu.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_kuo_da_nong_ye_fu_chi_zheng_che"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kuo_da_nong_ye_fu_chi_zheng_che.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_si_min_he_zuo"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_si_min_he_zuo.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ju_long_ang_shou"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ju_long_ang_shou.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_you_chu_ji_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_you_chu_ji_hua.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_guo_fang_zhong_xin_qu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_fang_zhong_xin_qu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_tui_xing_she_hui_bao_zhang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_tui_xing_she_hui_bao_zhang.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_an_quan_gai_ge_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_an_quan_gai_ge_fa.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_lun_Li_xin_dao_de"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_lun_Li_xin_dao_de.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_chun_zheng_de_san_min"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chun_zheng_de_san_min.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_bu_pao_qi_quan_min_zheng_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bu_pao_qi_quan_min_zheng_zhi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_this_is_our_country"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_this_is_our_country.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_this_is_our_worker_union"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_this_is_our_worker_union.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xian_zheng_min_zhu_ge_ren"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xian_zheng_min_zhu_ge_ren.png"
+	}		
+	spriteType = {
+		name = "GFX_goal_QIE_zai_tui_jin_qing_nian"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zai_tui_jin_qing_nian.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_jue_bu_tuo_xue_de_lian_shen"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jue_bu_tuo_xue_de_lian_shen.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_xin_gong_ming_dian_fan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xin_gong_ming_dian_fan.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_guo_hun_guo_guang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_hun_guo_guang.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_xin_shi_nu_hou"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xin_shi_nu_hou.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_ji_ping_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ji_ping_fa.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_shi_zhang_xing_she_hui"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_shi_zhang_xing_she_hui.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_kuo_da_gong_hui_quan_li"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kuo_da_gong_hui_quan_li.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_zhi_ye_dai_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhi_ye_dai_yi.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_jing_ji_ming_zhu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jing_ji_ming_zhu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_she_hui_zhu_yi_fire"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_she_hui_zhu_yi_fire.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_national_and_democracy"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_national_and_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_nei_sheng_wai_wang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_nei_sheng_wai_wang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_Individuality_Through_the_Nation"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_Individuality_Through_the_Nation.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_wu_pei_fu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wu_pei_fu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xiang_chun_dian_qi_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xiang_chun_dian_qi_hua.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_si_fa_ba_mian_quan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_si_fa_ba_mian_quan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_yi_liao_bao_xian"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_yi_liao_bao_xian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_guo_jia_yin_hang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_jia_yin_hang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_da_ji_long_duan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_da_ji_long_duan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_qu_zhong_xin_hua_shi_chang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_qu_zhong_xin_hua_shi_chang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_yi_ming_fa_an"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_yi_ming_fa_an.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_ai_gup_zhu_yi_jiao_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ai_gup_zhu_yi_jiao_yi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_mei_ti_guan_kong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_mei_ti_guan_kong.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_kuo_da_zong_tong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kuo_da_zong_tong.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_quan_xin_guo_du"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_quan_xin_guo_du.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gong_gong_gong_cheng"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_gong_gong_cheng.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gong_tuan_dang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_tuan_dang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_tu_di_fa_gai_ge"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_tu_di_fa_gai_ge.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_lao_gong_zai_quan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_lao_gong_zai_quan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gong_ren_lian_bang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_ren_lian_bang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_chu_li_fan_dui_pai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chu_li_fan_dui_pai.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_wang_luo_zhi_shi_fen_zi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wang_luo_zhi_shi_fen_zi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_yan_lun_guan_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_yan_lun_guan_zhi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_ju_shi_wen_ding"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ju_shi_wen_ding.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_sheng_ren_tong_zhi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_sheng_ren_tong_zhi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_jun_dui_shou"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jun_dui_shou.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_guo_you_hua"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guo_you_hua.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_chuan_tong_jiao_yu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chuan_tong_jiao_yu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_ti_xi_yong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_ti_xi_yong.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_wm_de_san_min"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_wm_de_san_min.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_ru_jia_gong_hui"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ru_jia_gong_hui.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_bu_tie_nong_min"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bu_tie_nong_min.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_fu_chi_ben_di"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_fu_chi_ben_di.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xi_fang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xi_fang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_da_yi_tong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_da_yi_tong.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_bi_yao_de_wu_li"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_bi_yao_de_wu_li.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_jun_ai_guo"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_jun_ai_guo.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_guo_de_shou_hu_zhe"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_guo_de_shou_hu_zhe.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_min_she_dang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_min_she_dang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_kan_ding_xian_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kan_ding_xian_fa.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_he_ping_yu_tong_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_he_ping_yu_tong_yi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_tuan_jie_yu_min_zhu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_tuan_jie_yu_min_zhu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_fei_gong_tuan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_fei_gong_tuan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_jin_bu_dang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jin_bu_dang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xian_zheng_dang_left"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xian_zheng_dang_left.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xian_zheng_dang_right"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xian_zheng_dang_right.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gong_he_dang"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_he_dang.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_bi_jiang_fu_xing"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_bi_jiang_fu_xing.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_jiao_kuan_rong"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_jiao_kuan_rong.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_jiao_yu_bai_tuo_yu_mei"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jiao_yu_bai_tuo_yu_mei.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_chuan_tong_bing_fei_cuo_wu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chuan_tong_bing_fei_cuo_wu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_rong_ren_chu_jin_he_ping"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_rong_ren_chu_jin_he_ping.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_he_ping_dai_lai_wen_ding"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_he_ping_dai_lai_wen_ding.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhi_si_chu_jin_gai_ge"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhi_si_chu_jin_gai_ge.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gai_ge_dai_lai_wen_ding"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gai_ge_dai_lai_wen_ding.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_roc_election"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_roc_election.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_jing_ying_zhi_guo"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jing_ying_zhi_guo.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zi_you_de_yan_lun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zi_you_de_yan_lun.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_du_li_de_shi_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_du_li_de_shi_fa.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_tian_fu_ren_quan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_tian_fu_ren_quan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_shi_ye_shi_wei_yi_chu_lu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_shi_ye_shi_wei_yi_chu_lu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_cai_zheng_wei_ji_bu_zai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_cai_zheng_wei_ji_bu_zai.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gu_li_zhu_yi_dao_lu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gu_li_zhu_yi_dao_lu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_he_er_gong_ying"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_he_er_gong_ying.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_li_jia_tu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_li_jia_tu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_da_gui_mo_zhi_ye"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_da_gui_mo_zhi_ye.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_guan_shui_zi_zhu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_guan_shui_zi_zhu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_free_dragon"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_free_dragon.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhong_hua_ru_jia"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhong_hua_ru_jia.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_li_fa_wei_hu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_li_fa_wei_hu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xia_fang_quan_li"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xia_fang_quan_li.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_kai_zhan_xiang_chun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kai_zhan_xiang_chun.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_nong_ye_wei_ben"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_nong_ye_wei_ben.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_new_gong_he"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_new_gong_he.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_gong_gu_gong_he_ming_zhu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_gong_gu_gong_he_ming_zhu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_kai_ban_jing_ying_jiao_yu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_kai_ban_jing_ying_jiao_yu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_xin_mao_yi_bao_hu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_xin_mao_yi_bao_hu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zheng_dun_ying_hang_ye"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zheng_dun_ying_hang_ye.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_di_fang_zhu_guan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_di_fang_zhu_guan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_zhi_xu_jin_ran"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_zhi_xu_jin_ran.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_di_wo_tong_hua_lun"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_di_wo_tong_hua_lun.png"
+	}	
+	spriteType = {
+		name = "GFX_goal_QIE_jian_xing_fa_tuan_zhu_yi"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jian_xing_fa_tuan_zhu_yi.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_jing_wu_gai_ge"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_jing_wu_gai_ge.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_new_factory"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_new_factory.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_shi_jian_yue_fa"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_shi_jian_yue_fa.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_ta_zi_di_yu_lai"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_ta_zi_di_yu_lai.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_suo_guo_zhi_chu"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_suo_guo_zhi_chu.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_chun_cao_bu_sheng"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_chun_cao_bu_sheng.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_han_ren_Jiang_shan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_han_ren_Jiang_shan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_dai_dai_chuan"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_dai_dai_chuan.png"
+	}
+	spriteType = {
+		name = "GFX_goal_QIE_tu_sha_yi_qie"
+		texturefile = "gfx/interface/goals/MQ_QIE/QIE_tu_sha_yi_qie.png"
+	}
+}

@@ -174,7 +174,7 @@ focus_tree = {
 		icon = GFX_goal_develop_provinces
 		cost = 5
 		prerequisite = { focus = FNG_Fuguo_Qiangbing }
-		x = -12
+		x = -10
 		y = 1
 		relative_position_id = FNG_Fuguo_Qiangbing
 		ai_will_do = { factor = 90 }
@@ -679,7 +679,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = {
 					localization_key = building_state_modifier|dam
-					INDENT = "    "
+					INDENT = "	"
 				}
 			}
 		}
@@ -3037,7 +3037,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = FNG_Fuguo_Qiangbing }
 		prerequisite = { focus = FNG_Suppress_Regionalist_Sentiment }
-		x = 21
+		x = 17
 		y = 1
 		relative_position_id = FNG_Fuguo_Qiangbing
 		ai_will_do = { factor = 90 }
@@ -3168,7 +3168,7 @@ focus_tree = {
 		cost = 8
 
 		relative_position_id = FNG_Found_the_Shenyang_National_Academy
-		x = -7
+		x = -12
 		y = 1
 
 		prerequisite = {
@@ -3877,7 +3877,7 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}		
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 29
+		x = 25
 		y = 1
 		ai_will_do = { factor = 40 }
 		completion_reward = {
@@ -4041,7 +4041,7 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 12
+		x = 8
 		y = 1
 		ai_will_do = { factor = 60 }
 		completion_reward = {
@@ -4248,7 +4248,7 @@ focus_tree = {
 			focus = FNG_Fuguo_Qiangbing
 		}
 		relative_position_id = FNG_Fuguo_Qiangbing
-		x = 35
+		x = 31
 		y = 1
 		available = {
 			has_idea = FNG_The_Kwantung_Army
@@ -5471,4 +5471,563 @@ focus_tree = {
 			clr_country_flag = FNG_zhang_clique_active
 		}
 	}
+
+	# 奉天通用的联省自治线
+	focus = {
+		id = FNG_Harmony_Difference # 和而不同
+		icon = GFX_goal_China_GRA
+		x = 10
+		y = 10
+		cost = 10
+		available = {
+			always = no
+		}		
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Common_Charter # 颁布共同约章
+		icon = GFX_goal_MON_Peoples_Constitution
+		relative_position_id = FNG_Harmony_Difference
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Harmony_Difference
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Reorganize_Governorship # 督署改组
+		icon = GFX_goal_china_federalist_army
+		relative_position_id = FNG_Harmony_Difference
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Harmony_Difference
+		}
+
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+
+	# 第三层：联省制度
+	focus = {
+		id = FNG_States_Before_Federation # 有邦而后有联邦
+		icon = GFX_goal_china_negotiations
+		relative_position_id = FNG_Common_Charter
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Common_Charter
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Permanent_Federal_Conference # 常设联席会议
+		icon = GFX_goal_generic_parliament
+		relative_position_id = FNG_Common_Charter
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Common_Charter
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FNG_Local_Garrisons # 防军留镇，地盘互保
+		icon = GFX_goal_CHN_china_federalist_militarism
+		relative_position_id = FNG_Reorganize_Governorship
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Reorganize_Governorship
+		}
+
+		completion_reward = {
+			add_army_experience = 15
+			add_war_support = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Military_Civilian_Division # 厘定军民权限
+		icon = GFX_goal_FNG_End_Republican_Warlords
+		relative_position_id = FNG_Reorganize_Governorship
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Reorganize_Governorship
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	# 第四层：财政与地方治理
+	focus = {
+		id = FNG_Local_Revenue_Survey # 清查地方财赋
+		icon = GFX_goal_generic_investigation
+		relative_position_id = FNG_States_Before_Federation
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_States_Before_Federation
+		}
+		prerequisite = {
+			focus = FNG_Permanent_Federal_Conference
+		}		
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FNG_Central_Local_Taxation # 划分央地税权
+		icon = GFX_goal_generic_landowner_tax_cuts
+		relative_position_id = FNG_Permanent_Federal_Conference
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Permanent_Federal_Conference
+		}
+		prerequisite = {
+			focus = FNG_Local_Garrisons
+		}		
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Jin_Yue_Experience # 推广晋粤经验
+		icon = GFX_goal_FNG_Xishan_Thought
+		relative_position_id = FNG_Military_Civilian_Division
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Military_Civilian_Division
+		}
+		prerequisite = {
+			focus = FNG_Local_Garrisons
+		}		
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	# 第五层：地方财政与对外投资
+	focus = {
+		id = FNG_Local_Bonds # 开放地方举债
+		icon = GFX_goal_generic_loans
+		relative_position_id = FNG_Local_Revenue_Survey
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Local_Revenue_Survey
+		}
+
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+
+	focus = {
+		id = FNG_Foreign_Investment # 招徕外商投资
+		icon = GFX_goal_generic_foreign_investments
+		relative_position_id = FNG_Local_Revenue_Survey
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Local_Revenue_Survey
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	# 第五层：基层治理
+	focus = {
+		id = FNG_Village_Politics # 村本政治
+		icon = GFX_goal_generic_agriculture2
+		relative_position_id = FNG_Jin_Yue_Experience
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Jin_Yue_Experience
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = FNG_County_Councils # 推行县议会
+		icon = GFX_goal_generic_elections
+		relative_position_id = FNG_Jin_Yue_Experience
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Jin_Yue_Experience
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Interprovincial_Trade # 省际通商章程
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		relative_position_id = FNG_Foreign_Investment
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Local_Revenue_Survey
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Six_Policies_Three_Affairs # 六政三事
+		icon = GFX_goal_generic_land_reform
+		relative_position_id = FNG_County_Councils
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Jin_Yue_Experience
+		}		
+
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+
+	# 安福俱乐部重建路线
+	focus = {
+		id = FNG_Restore_Old_Capital # 光复旧京
+		icon = GFX_goal_China_five_races_flag
+		x = 19
+		y = 10
+		cost = 10
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Recruit_Zhili_Old_Officials # 延揽直系旧僚
+		icon = GFX_goal_QIE_zhili
+		relative_position_id = FNG_Restore_Old_Capital
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Restore_Old_Capital
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FNG_First_Party_in_New_Parliament # 新国会下第一党
+		icon = GFX_goal_QIE_assembly
+		relative_position_id = FNG_Restore_Old_Capital
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Restore_Old_Capital
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Administrative_Judicial_Reorganization # 行政与司法整备
+		icon = GFX_goal_generic_trial
+		relative_position_id = FNG_Restore_Old_Capital
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Restore_Old_Capital
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	# 第三层：安国福民
+	focus = {
+		id = FNG_Pacify_Nation_Benefit_People # 安国福民
+		icon = GFX_goal_China_twelve_symbols
+		relative_position_id = FNG_First_Party_in_New_Parliament
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Recruit_Zhili_Old_Officials
+		}
+		prerequisite = {
+			focus = FNG_First_Party_in_New_Parliament
+		}
+		prerequisite = {
+			focus = FNG_Administrative_Judicial_Reorganization
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = FNG_Wangdao_Alliance # 王道主义的盟约
+		icon = GFX_goal_GXC_xu_ri_dong_sheng_KX
+		relative_position_id = FNG_Pacify_Nation_Benefit_People
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Pacify_Nation_Benefit_People
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_New_Citizen_Movement # 倡行新民运动
+		icon = GFX_goal_generic_indoctrinate_minds_manipulate_people
+		relative_position_id = FNG_Pacify_Nation_Benefit_People
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Pacify_Nation_Benefit_People
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = FNG_Renew_Livelihood_Study_Society # 重启民生主义研究会
+		icon = GFX_goal_GXC_lao_xian_sheng
+		relative_position_id = FNG_Pacify_Nation_Benefit_People
+		x = 2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Pacify_Nation_Benefit_People
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = FNG_Oriental_Culture_and_Morality # 东方文化道德
+		icon = GFX_goal_QIE_wu_wei_zhong_yong
+		relative_position_id = FNG_Wangdao_Alliance
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Wangdao_Alliance
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = FNG_Establish_Local_Maintenance_Associations # 建立地方维持会
+		icon = GFX_goal_QIE_qiang_you_li_zheng_fu
+		relative_position_id = FNG_Wangdao_Alliance
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Wangdao_Alliance
+		}
+		prerequisite = {
+			focus = FNG_New_Citizen_Movement
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = FNG_Adopt_Houzheng_Experience # 借鉴厚生事业
+		icon = GFX_goal_QIE_tui_xing_she_hui_bao_zhang
+		relative_position_id = FNG_New_Citizen_Movement
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_New_Citizen_Movement
+		}
+		prerequisite = {
+			focus = FNG_Renew_Livelihood_Study_Society
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = FNG_Grain_Price_Relief # 平粜救济
+		icon = GFX_goal_generic_rice_field
+		relative_position_id = FNG_Renew_Livelihood_Study_Society
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Renew_Livelihood_Study_Society
+		}
+
+		completion_reward = {
+			add_stability = 0.04
+		}
+	}
+
+	focus = {
+		id = FNG_Land_Development_Cooperation # 地产开发合作
+		icon = GFX_goal_QIE_fu_chi_ben_di
+		relative_position_id = FNG_Establish_Local_Maintenance_Associations
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Establish_Local_Maintenance_Associations
+		}
+		prerequisite = {
+			focus = FNG_Oriental_Culture_and_Morality
+		}		
+
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+
+	focus = {
+		id = FNG_Reconcile_Social_Classes # 调和社会各阶级
+		icon = GFX_goal_QIE_nong_cun_min_zong_jiao_yu
+		relative_position_id = FNG_Grain_Price_Relief
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = FNG_Adopt_Houzheng_Experience
+		}
+		prerequisite = {
+			focus = FNG_Grain_Price_Relief
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.04
+		}
+	}	
 }

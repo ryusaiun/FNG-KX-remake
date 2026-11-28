@@ -8,4 +8,204 @@ spriteTypes = {
 		name = "GFX_goal_generic_railway_gun"
 		texturefile = "gfx/interface/goals/generic_railway_gun.png"
 	}
+
+	# KR 中国系图标 —— KX 与本体未收录，从 Kaiserredux 搬入
+	spriteType = {
+		name = "GFX_goal_CHN_china_beiyang_militarism"
+		texturefile = "gfx/interface/goals/CHN_china_beiyang_militarism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_CHN_china_federalist_militarism"
+		texturefile = "gfx/interface/goals/CHN_china_federalist_militarism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_CHN_china_ger_exchange"
+		texturefile = "gfx/interface/goals/CHN_china_ger_exchange.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_Beiyang_coat_of_arms"
+		texturefile = "gfx/interface/goals/China_Beiyang_coat_of_arms.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_Beiyang_soldier"
+		texturefile = "gfx/interface/goals/China_Beiyang_soldier.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_Beiyang_soldier_five_colour_flag"
+		texturefile = "gfx/interface/goals/China_Beiyang_soldier_five_colour_flag.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_Beiyang_training"
+		texturefile = "gfx/interface/goals/China_Beiyang_training.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_CDL"
+		texturefile = "gfx/interface/goals/China_CDL.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_CSP"
+		texturefile = "gfx/interface/goals/China_CSP.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_GRA"
+		texturefile = "gfx/interface/goals/China_GRA.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_LKMT"
+		texturefile = "gfx/interface/goals/China_LKMT.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_NPA"
+		texturefile = "gfx/interface/goals/China_NPA.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_cog_and_plow"
+		texturefile = "gfx/interface/goals/China_cog_and_plow.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_five_colour_beiyang_star_auth"
+		texturefile = "gfx/interface/goals/China_five_colour_beiyang_star_auth.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_five_races_flag"
+		texturefile = "gfx/interface/goals/China_five_races_flag.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_five_races_star"
+		texturefile = "gfx/interface/goals/China_five_races_star.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_kuomintang_soldier"
+		texturefile = "gfx/interface/goals/China_kuomintang_soldier.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_red_star"
+		texturefile = "gfx/interface/goals/China_red_star.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_twelve_symbols"
+		texturefile = "gfx/interface/goals/China_twelve_symbols.png"
+	}
+	spriteType = {
+		name = "GFX_goal_China_white_sun_blue_sky"
+		texturefile = "gfx/interface/goals/China_white_sun_blue_sky.png"
+	}
+	spriteType = {
+		name = "GFX_goal_china_beiyang_cooporation"
+		texturefile = "gfx/interface/goals/china_beiyang_cooporation.png"
+	}
+	spriteType = {
+		name = "GFX_goal_china_chinese_art_of_warfare"
+		texturefile = "gfx/interface/goals/china_chinese_art_of_warfare.png"
+	}
+
+	# KR 通用图标 —— KX 与本体未收录，从 Kaiserredux 搬入
+	spriteType = {
+		name = "GFX_goal_generic_air_CAS_german_new"
+		texturefile = "gfx/interface/goals/generic_air_CAS_german_new.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_air_fighter_obselete"
+		texturefile = "gfx/interface/goals/generic_air_fighter_obselete.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_anti_insurgency"
+		texturefile = "gfx/interface/goals/generic_anti_insurgency.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_armoured_car_general"
+		texturefile = "gfx/interface/goals/generic_armoured_car_general.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_army_soldier"
+		texturefile = "gfx/interface/goals/generic_army_soldier.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_army_soldier_2"
+		texturefile = "gfx/interface/goals/generic_army_soldier_2.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_freemasons"
+		texturefile = "gfx/interface/goals/generic_freemasons.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_german_mechanized"
+		texturefile = "gfx/interface/goals/generic_german_mechanized.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_hard_anticlericalism"
+		texturefile = "gfx/interface/goals/generic_hard_anticlericalism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_heavy_armour_canadian"
+		texturefile = "gfx/interface/goals/generic_heavy_armour_canadian.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_integralist_workers"
+		texturefile = "gfx/interface/goals/generic_integralist_workers.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_machine_guns"
+		texturefile = "gfx/interface/goals/generic_machine_guns.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_militarism"
+		texturefile = "gfx/interface/goals/generic_militarism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_modern_armour_german"
+		texturefile = "gfx/interface/goals/generic_modern_armour_german.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_motor_bike_infantry"
+		texturefile = "gfx/interface/goals/generic_motor_bike_infantry.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_old_armoured_car"
+		texturefile = "gfx/interface/goals/generic_old_armoured_car.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_parliamentary_syndicalism"
+		texturefile = "gfx/interface/goals/generic_parliamentary_syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_purge_bureaucracy"
+		texturefile = "gfx/interface/goals/generic_purge_bureaucracy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_soft_anticlericalism"
+		texturefile = "gfx/interface/goals/generic_soft_anticlericalism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_speech"
+		texturefile = "gfx/interface/goals/generic_speech.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_syndicalism"
+		texturefile = "gfx/interface/goals/generic_syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_syndicalist_army_soldiers"
+		texturefile = "gfx/interface/goals/generic_syndicalist_army_soldiers.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_syndicalist_council"
+		texturefile = "gfx/interface/goals/generic_syndicalist_council.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_syndicalist_europe"
+		texturefile = "gfx/interface/goals/generic_syndicalist_europe.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_syndicalist_workers"
+		texturefile = "gfx/interface/goals/generic_syndicalist_workers.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_taoism"
+		texturefile = "gfx/interface/goals/generic_taoism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_truck_russian"
+		texturefile = "gfx/interface/goals/generic_truck_russian.png"
+	}
 }
